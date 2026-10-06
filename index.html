@@ -36,6 +36,9 @@
   </script>
 </head>
 <body>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
   <div class="noise"></div>
 
   <nav class="nav shell" aria-label="Primary navigation">
@@ -45,6 +48,7 @@
     </a>
     <div class="nav-links">
       <a href="#featured">Featured</a>
+      <a href="#activity">Activity</a>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
       <a class="nav-github" href="https://github.com/admknight" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -66,13 +70,13 @@
         <div class="terminal-top"><span></span><span></span><span></span></div>
         <div class="terminal-body">
           <p><span class="prompt">$</span> whoami</p>
-          <p class="terminal-output">Adam Knight</p>
+          <p class="terminal-output type-line" data-text="Adam Knight">Adam Knight</p>
           <p><span class="prompt">$</span> focus --current</p>
-          <p class="terminal-output">open-source · automation · tooling</p>
+          <p class="terminal-output type-line" data-text="open-source · automation · tooling">open-source · automation · tooling</p>
           <p><span class="prompt">$</span> github --public-repos</p>
           <p class="terminal-output"><strong id="repo-count">loading…</strong> repositories · <strong id="star-count">—</strong> stars</p>
           <p><span class="prompt">$</span> status</p>
-          <p class="terminal-output status-ok">● building</p>
+          <p class="terminal-output status-ok type-line" data-text="● building">● building</p>
         </div>
       </div>
     </section>
@@ -121,6 +125,23 @@
           <div><strong id="cs-custom">6</strong><span>Custom providers</span></div>
         </div>
       </article>
+    </section>
+
+
+    <section id="activity" class="section shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">LIVE ACTIVITY</p>
+          <h2>Recently updated</h2>
+          <p class="section-sub">The latest public repositories with fresh activity on GitHub.</p>
+        </div>
+        <span id="activity-status" class="live-pill"><span></span> Live from GitHub</span>
+      </div>
+      <div id="activity-list" class="activity-list" aria-live="polite">
+        <div class="activity-row skeleton-row"></div>
+        <div class="activity-row skeleton-row"></div>
+        <div class="activity-row skeleton-row"></div>
+      </div>
     </section>
 
     <section id="projects" class="section shell">
