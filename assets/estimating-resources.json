@@ -4,7 +4,7 @@
   "owner": "Adam Knight",
   "site": "https://admknight.github.io/estimating-tools.html",
   "attribution": "Independent third-party software listing. Original authors retain copyright and licenses.",
-  "methodology": "54 distinct repositories, source README/repository metadata and available licenses reviewed as of 2026-10-09. Linked projects are not execution-tested, security-audited or calculation-certified by this directory.",
+  "methodology": "Includes open-source projects, source-available personal/internal-use tools, noncommercial-only datasets, and external services or licensing-conflict references. License files and README claims were checked independently as of 2026-10-09; suitability, prices and execution are not certified.",
   "categories": [
     {
       "id": "drawing-takeoff",
@@ -55,7 +55,8 @@
         "mcp",
         "xlsx"
       ],
-      "featured": true
+      "featured": true,
+      "accessLevel": "Open Source"
     },
     {
       "id": "openconstructionerp",
@@ -76,7 +77,8 @@
         "erp",
         "procurement"
       ],
-      "featured": true
+      "featured": true,
+      "accessLevel": "Open Source"
     },
     {
       "id": "bidwright",
@@ -96,7 +98,8 @@
         "mcp",
         "bid"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "construction-tender-assembly-builder",
@@ -116,7 +119,8 @@
         "cost code",
         "tender"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "ifcopenshell-ifc5d",
@@ -137,7 +141,8 @@
         "csv",
         "xlsx"
       ],
-      "featured": true
+      "featured": true,
+      "accessLevel": "Open Source"
     },
     {
       "id": "freecad-bim",
@@ -157,7 +162,8 @@
         "quantity",
         "model"
       ],
-      "featured": true
+      "featured": true,
+      "accessLevel": "Open Source"
     },
     {
       "id": "qto-buccaneer",
@@ -175,7 +181,8 @@
         "excel",
         "report"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "freecad-bill-of-materials-workbench",
@@ -193,7 +200,8 @@
         "takeoff",
         "excel"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "pycostestimates-pyrevit",
@@ -211,7 +219,8 @@
         "material",
         "quantities"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "ezdxf",
@@ -231,7 +240,8 @@
         "area",
         "material"
       ],
-      "featured": true
+      "featured": true,
+      "accessLevel": "Open Source"
     },
     {
       "id": "pdfplumber",
@@ -249,7 +259,8 @@
         "specification",
         "python"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "buildsuite-core",
@@ -267,7 +278,8 @@
         "rate library",
         "retention"
       ],
-      "featured": true
+      "featured": true,
+      "accessLevel": "Open Source"
     },
     {
       "id": "openproject-community",
@@ -286,7 +298,8 @@
         "tracking",
         "issue"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "construction-project-control-web-app",
@@ -306,7 +319,8 @@
         "cash flow",
         "cost"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "ai-skills-for-construction",
@@ -329,7 +343,8 @@
         "Claude Code",
         "Codex",
         "Other AI coding assistants"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "quantitytakeoff-python-examples",
@@ -347,7 +362,8 @@
         "bim",
         "group"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "quantity-surveyor-ai-skill",
@@ -371,7 +387,8 @@
         "Claude Code",
         "Codex",
         "ChatGPT (instructions)"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "claude-2d-pdf-to-priced-boq",
@@ -393,7 +410,8 @@
       "featured": true,
       "compatibleWith": [
         "Claude Code"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "construction-agent-skills-28",
@@ -416,7 +434,8 @@
       "compatibleWith": [
         "Claude",
         "Claude Code"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "construction-reference-mcp",
@@ -440,7 +459,8 @@
         "Claude Code",
         "Claude Desktop",
         "MCP clients"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "construction-prompts-for-chatgpt-claude",
@@ -463,7 +483,8 @@
       "compatibleWith": [
         "ChatGPT (instructions)",
         "Claude"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "qs-skills-anzsmm-and-acmm",
@@ -484,7 +505,8 @@
       "featured": false,
       "compatibleWith": [
         "Claude Code"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "construction-pm-claude-plugin",
@@ -506,7 +528,8 @@
       "featured": false,
       "compatibleWith": [
         "Claude Code"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "bonsai-mcp-blender-bim",
@@ -528,7 +551,8 @@
       "compatibleWith": [
         "Claude",
         "MCP clients"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "ifcmcp",
@@ -550,7 +574,8 @@
       "compatibleWith": [
         "Claude",
         "MCP clients"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "ifc-mcp-analysis-server",
@@ -571,7 +596,8 @@
       "featured": false,
       "compatibleWith": [
         "MCP clients"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "autocad-mcp-pro",
@@ -593,7 +619,8 @@
       "compatibleWith": [
         "Claude",
         "MCP clients"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "cad-mcp-server",
@@ -614,7 +641,8 @@
       "compatibleWith": [
         "Claude Desktop",
         "MCP clients"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "qcad-mcp",
@@ -634,7 +662,8 @@
       "featured": false,
       "compatibleWith": [
         "MCP clients"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "boq-mcp-for-claude",
@@ -656,7 +685,8 @@
       "compatibleWith": [
         "Claude Code",
         "Claude Desktop"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "construction-takeoff-client-plugins",
@@ -679,7 +709,8 @@
         "Claude Code",
         "Codex",
         "Claude Desktop"
-      ]
+      ],
+      "accessLevel": "Open Source"
     },
     {
       "id": "bimserver",
@@ -696,7 +727,8 @@
         "model",
         "server"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "that-open-web-ifc",
@@ -713,7 +745,8 @@
         "javascript",
         "bim"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "that-open-components",
@@ -730,7 +763,8 @@
         "viewer",
         "measurement"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "bimsurfer",
@@ -746,7 +780,8 @@
         "bim",
         "viewer"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "bldrs-share",
@@ -763,7 +798,8 @@
         "collaboration",
         "viewer"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "qgis",
@@ -780,7 +816,8 @@
         "earthwork",
         "area"
       ],
-      "featured": true
+      "featured": true,
+      "accessLevel": "Open Source"
     },
     {
       "id": "earthworkq-qgis-plugin",
@@ -797,7 +834,8 @@
         "cut fill",
         "volume"
       ],
-      "featured": true
+      "featured": true,
+      "accessLevel": "Open Source"
     },
     {
       "id": "opendronemap",
@@ -814,7 +852,8 @@
         "terrain",
         "dem"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "pdal-point-cloud-library",
@@ -831,7 +870,8 @@
         "survey",
         "terrain"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "gdal-ogr",
@@ -848,7 +888,8 @@
         "vector",
         "terrain"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "open3d",
@@ -865,7 +906,8 @@
         "survey",
         "volume"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "geopandas",
@@ -882,7 +924,8 @@
         "site",
         "area"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "shapely",
@@ -899,7 +942,8 @@
         "geometry",
         "python"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "librecad-2d",
@@ -916,7 +960,8 @@
         "dwg",
         "measurement"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "mozilla-pdf-js",
@@ -933,7 +978,8 @@
         "drawings",
         "viewer"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "paddleocr",
@@ -950,7 +996,8 @@
         "tables",
         "pdf"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "tesseract-ocr",
@@ -967,7 +1014,8 @@
         "pdf",
         "drawings"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "pymupdf",
@@ -984,7 +1032,8 @@
         "vectors",
         "boq"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "pypdf",
@@ -1001,7 +1050,8 @@
         "split",
         "tender"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "acadsharp-dxf-dwg",
@@ -1018,7 +1068,8 @@
         "dwg",
         "csharp"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "paperless-ngx",
@@ -1035,7 +1086,8 @@
         "contract",
         "archive"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "google-or-tools",
@@ -1051,7 +1103,8 @@
         "resources",
         "optimization"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
     },
     {
       "id": "ganttproject",
@@ -1068,9 +1121,286 @@
         "project",
         "progress"
       ],
-      "featured": false
+      "featured": false,
+      "accessLevel": "Open Source"
+    },
+    {
+      "id": "ddc-cwicr-construction-cost-database",
+      "name": "DDC CWICR Construction Cost Database",
+      "category": "rates-estimating",
+      "mode": "SDK",
+      "license": "CC BY-NC 4.0 (data) / Apache-2.0 (code)",
+      "accessLevel": "Noncommercial Data",
+      "summary": "Multilingual resource-based construction cost datasets, work items and Python/AI workflow adapters for studying rate build-ups.",
+      "caution": "Data explicitly allows personal research/evaluation with attribution; not for paid estimating services without a DDC commercial license. Keep source provenance notices; the book has separate terms.",
+      "tags": [
+        "rate analysis",
+        "cost database",
+        "boq",
+        "material",
+        "labor",
+        "noncommercial",
+        "csv",
+        "xls",
+        "personal use"
+      ],
+      "featured": true,
+      "source": "https://github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR",
+      "licenseUrl": "https://github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR/blob/main/LICENSE-DATA.txt"
+    },
+    {
+      "id": "autoconst-claude-construction-takeoff-skill",
+      "name": "AutoConst Claude Construction Takeoff Skill",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "AutoConst Source Available",
+      "accessLevel": "Personal / Internal Use",
+      "summary": "Claude skill for structural drawing takeoffs, concrete/formwork/rebar quantities, marked-up audit images and Excel exports.",
+      "caution": "Actual LICENSE permits personal/internal use but prohibits resale or commercial redistribution of the tool, despite README stating MIT. Needs Claude subscription and the archived Drawing Analyzer prerequisite; verify quantities.",
+      "tags": [
+        "claude",
+        "skill",
+        "takeoff",
+        "rebar",
+        "concrete",
+        "formwork",
+        "excel",
+        "source available"
+      ],
+      "compatibleWith": [
+        "Claude",
+        "Claude Code"
+      ],
+      "featured": true,
+      "source": "https://github.com/hamzaabduljabbar/claude-construction-takeoff-skill",
+      "licenseUrl": "https://github.com/hamzaabduljabbar/claude-construction-takeoff-skill/blob/main/LICENSE"
+    },
+    {
+      "id": "autoconst-drawing-analyzer-archived",
+      "name": "AutoConst Drawing Analyzer (Archived)",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "AutoConst Source Available",
+      "accessLevel": "Personal / Internal Use",
+      "summary": "Archived drawing-set preprocessor for sheet splitting, polygon extraction and index files used by the original AutoConst takeoff skill.",
+      "caution": "Upstream explicitly archived this in favor of a newer vector-database workflow. LICENSE allows personal/internal use but not software resale; README's MIT label conflicts. Legacy prerequisite only.",
+      "tags": [
+        "drawing analyzer",
+        "claude",
+        "pdf",
+        "polygon",
+        "takeoff",
+        "archived"
+      ],
+      "compatibleWith": [
+        "Claude Code"
+      ],
+      "featured": false,
+      "source": "https://github.com/hamzaabduljabbar/construction-drawing-analyzer",
+      "licenseUrl": "https://github.com/hamzaabduljabbar/construction-drawing-analyzer/blob/main/LICENSE"
+    },
+    {
+      "id": "autoconst-claude-pdf-markup-skill",
+      "name": "AutoConst Claude PDF Markup Skill",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "AutoConst Source Available",
+      "accessLevel": "Personal / Internal Use",
+      "summary": "Bulk construction PDF stamps, annotations, markup edits and markup-register extraction with Claude.",
+      "caution": "Original LICENSE allows personal/internal use, but no commercial redistribution or resale. README claims MIT incorrectly. Requires suitable Claude subscription and thorough output review.",
+      "tags": [
+        "pdf",
+        "markup",
+        "bluebeam alternative",
+        "revisions",
+        "claude",
+        "skill"
+      ],
+      "compatibleWith": [
+        "Claude",
+        "Claude Code"
+      ],
+      "featured": false,
+      "source": "https://github.com/hamzaabduljabbar/claude-pdf-markup-skill",
+      "licenseUrl": "https://github.com/hamzaabduljabbar/claude-pdf-markup-skill/blob/main/LICENSE"
+    },
+    {
+      "id": "autoconst-vector-pdf-drawing-takeoff",
+      "name": "AutoConst Vector PDF Drawing Takeoff",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "AutoConst Source Available",
+      "accessLevel": "Personal / Internal Use",
+      "summary": "Claude Code skill and Python CLI indexing vector-PDF labels, schedules and dimensions into a queryable SQLite drawing database.",
+      "caution": "Requires machine-readable vector text; scanned sheets need a different workflow. The repository LICENSE permits personal/internal use, not resale, despite README saying MIT.",
+      "tags": [
+        "claude",
+        "takeoff",
+        "pdf",
+        "sqlite",
+        "vector text",
+        "quantities",
+        "calibration"
+      ],
+      "compatibleWith": [
+        "Claude Code"
+      ],
+      "featured": true,
+      "source": "https://github.com/hamzaabduljabbar/autoConst-drawing-takeoff-claude",
+      "licenseUrl": "https://github.com/hamzaabduljabbar/autoConst-drawing-takeoff-claude/blob/main/LICENSE"
+    },
+    {
+      "id": "autoconst-construction-project-indexer",
+      "name": "AutoConst Construction Project Indexer",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "AutoConst Source Available",
+      "accessLevel": "Personal / Internal Use",
+      "summary": "Claude Cowork project indexer for drawings, BOQs, specifications, contracts and project-document context.",
+      "caution": "Indexes may expose confidential project files to the selected AI host; check privacy. License explicitly permits personal/internal use but prohibits resale/distribution of the software as a paid service.",
+      "tags": [
+        "claude",
+        "cowork",
+        "construction documents",
+        "boq",
+        "contracts",
+        "project index"
+      ],
+      "compatibleWith": [
+        "Claude Cowork"
+      ],
+      "featured": false,
+      "source": "https://github.com/hamzaabduljabbar/construction-claude-cowork-project-indexer",
+      "licenseUrl": "https://github.com/hamzaabduljabbar/construction-claude-cowork-project-indexer/blob/main/LICENSE"
+    },
+    {
+      "id": "autoconst-ifc-to-priced-boq",
+      "name": "AutoConst IFC to Priced BOQ",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "AutoConst Source Available",
+      "accessLevel": "Personal / Internal Use",
+      "summary": "Claude Code workflow extracting IFC quantities and creating an Excel priced BOQ using your own rate library.",
+      "caution": "Repository README describes code as MIT but actual LICENSE is source-available: personal/internal use allowed, redistribution as a paid product/service restricted. Rates not included; validate IFC units.",
+      "tags": [
+        "ifc",
+        "bim",
+        "claude",
+        "priced boq",
+        "excel",
+        "rate library"
+      ],
+      "compatibleWith": [
+        "Claude Code"
+      ],
+      "featured": true,
+      "source": "https://github.com/hamzaabduljabbar/autoconst-claude-boq-from-ifc",
+      "licenseUrl": "https://github.com/hamzaabduljabbar/autoconst-claude-boq-from-ifc/blob/main/LICENSE"
+    },
+    {
+      "id": "autoconst-legacy-pdf-priced-boq-archived",
+      "name": "AutoConst Legacy PDF Priced BOQ (Archived)",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "MIT",
+      "accessLevel": "Open Source (Archived)",
+      "summary": "Earlier Claude Code PDF-to-priced-Excel-BOQ workflow with vector text extraction and confidence flags.",
+      "caution": "Upstream archived; prefer its newer maintained 2D PDF to Priced BOQ successor already listed. This earlier repository's LICENSE is MIT.",
+      "tags": [
+        "claude",
+        "pdf",
+        "priced boq",
+        "legacy",
+        "archived",
+        "excel"
+      ],
+      "compatibleWith": [
+        "Claude Code"
+      ],
+      "featured": false,
+      "source": "https://github.com/hamzaabduljabbar/autoconst-claude-drawing-takeoff",
+      "licenseUrl": "https://github.com/hamzaabduljabbar/autoconst-claude-drawing-takeoff/blob/main/LICENSE"
+    },
+    {
+      "id": "estimaite-remote-takeoff-mcp",
+      "name": "Estimaite Remote Takeoff MCP",
+      "category": "ai-skills-mcp",
+      "mode": "MCP Server",
+      "license": "MIT (manifest only)",
+      "accessLevel": "Hosted / Account Required",
+      "summary": "Remote hosted MCP connector advertised for PDF measurements, construction takeoff, unit-rate pricing and proposal exports.",
+      "caution": "GitHub publishes only the connector manifest/docs, not the hosted server code. Estimaite account/OAuth required; pricing and personal-use rights of the backend must be checked with provider.",
+      "tags": [
+        "mcp",
+        "takeoff",
+        "pdf",
+        "priced estimate",
+        "remote service",
+        "oauth",
+        "subscription"
+      ],
+      "compatibleWith": [
+        "Claude",
+        "MCP clients"
+      ],
+      "featured": false,
+      "sourceLabel": "Manifest ↗",
+      "source": "https://github.com/nickpanagios/estimaite-mcp",
+      "licenseUrl": "https://github.com/nickpanagios/estimaite-mcp/blob/main/LICENSE"
+    },
+    {
+      "id": "constructflow-contracting-for-odoo",
+      "name": "ConstructFlow Contracting for Odoo",
+      "category": "contract-controls",
+      "mode": "Add-on",
+      "license": "LGPL-3 (files) / OPL-1 (README)",
+      "accessLevel": "License Conflict",
+      "summary": "Odoo 19 construction controls with BOQ imports, client certificates, subcontract billing, retention, variation approvals and cost tracking.",
+      "caution": "README declares proprietary OPL-1 but repository LICENSE and module manifest declare LGPL-3. Conflicting license statements require written clarification before using or republishing; Odoo installation required.",
+      "tags": [
+        "odoo",
+        "boq",
+        "subcontractor",
+        "retention",
+        "variations",
+        "ipc",
+        "license conflict"
+      ],
+      "featured": false,
+      "source": "https://github.com/FlousFlow/constructflow",
+      "licenseUrl": "https://github.com/FlousFlow/constructflow/blob/main/LICENSE"
+    },
+    {
+      "id": "construction-ai-plugins-claude-chatgpt",
+      "name": "Construction AI Plugins — Claude & ChatGPT",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "MIT (README only; no LICENSE file)",
+      "accessLevel": "Terms Unclear / Paid",
+      "summary": "Construction RFI, daily report, estimate review, change-order and safety prompt/plugin workflows for Claude and ChatGPT/Codex.",
+      "caution": "README states MIT but repository has no LICENSE file and also advertises paid plugin bundles and subscription access. Check exactly which files and services are available for personal use before installation.",
+      "tags": [
+        "claude",
+        "chatgpt",
+        "plugin",
+        "rfi",
+        "estimate review",
+        "change order",
+        "paid",
+        "license unconfirmed"
+      ],
+      "compatibleWith": [
+        "Claude Code",
+        "ChatGPT (instructions)",
+        "Codex"
+      ],
+      "featured": false,
+      "sourceLabel": "Repository ↗",
+      "source": "https://github.com/PAMF2/openclaw-construction",
+      "licenseUrl": "https://github.com/PAMF2/openclaw-construction/blob/master/README.md"
     }
   ],
   "compatibilityNote": "ChatGPT (instructions) means reusable instructions/prompts, NOT a native installable ChatGPT plugin. Claude Code skills and MCP servers are separately identified; their installation depends on the user's AI host.",
-  "researchScope": "PDF and CAD takeoff, BIM/IFC quantities, rate buildup, contract controls, earthworks/survey workflows, Claude/ChatGPT-compatible prompts and skills, MCP servers. GitLab also searched; no extra candidate admitted without comparable source/license evidence."
+  "researchScope": "PDF and CAD takeoff, BIM/IFC quantities, rate buildup, contract controls, earthworks/survey workflows, Claude/ChatGPT-compatible prompts and skills, MCP servers. GitLab also searched; no extra candidate admitted without comparable source/license evidence. Personal-study options are shown even when commercial redistribution is restricted; hosted/paid or ambiguous offerings require additional permission.",
+  "licenseNotice": "Listing or linking is not redistribution. Personal/internal-use grants do not authorize selling or hosting restricted code. CC BY-NC datasets cannot be used in paid estimates without permission. Conflicting or missing licenses should be clarified with the authors. No third-party code/data is mirrored here."
 }
