@@ -254,3 +254,11 @@ select{height:42px;border:1px solid var(--line);background:#0f1828;color:var(--t
   .mega-path,.mega-path-action{transition:none}
   .mega-path:hover,.mega-path:focus-within{transform:none}
 }
+
+/* Shared MegaRepo ecosystem back-to-top control. */
+.back-to-top{position:fixed;right:20px;bottom:20px;z-index:1001;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:74px;padding:10px 15px;border:1px solid #407395;border-radius:999px;background:linear-gradient(145deg,#153b59,#0c2035);box-shadow:0 12px 32px rgba(0,0,0,.38);color:#f2f9ff;font:800 .85rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.back-to-top:hover{transform:translateY(-2px);background:#205473;border-color:#79dff8}
+.back-to-top:focus-visible{outline:2px solid #7de7ff;outline-offset:3px}
+.back-to-top[hidden]{display:none}
+@media(max-width:620px){.back-to-top{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));padding:11px 13px}}
+@media(prefers-reduced-motion:reduce){.back-to-top{transition:none}}
