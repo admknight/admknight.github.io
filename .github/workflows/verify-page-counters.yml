@@ -1,4 +1,4 @@
-name: Verify page view badge providers
+name: Verify Website Page View Counters
 
 on:
   workflow_dispatch:
@@ -10,41 +10,44 @@ permissions:
   contents: read
 
 jobs:
-  probe:
+  check-counters:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Probe image services and deployed pages
+      - name: Check four published pages and their real counters
         run: |
           python3 - <<'PY'
-          import urllib.request, urllib.error, xml.etree.ElementTree as ET
-          targets = {
-              'hits_portfolio': 'https://hits.sh/admknight.github.io.svg?style=flat-square&label=Page+views&color=43a7ff&labelColor=18263a',
-              'hits_example': 'https://hits.sh/github.com/silentsoft/hits.svg',
-              'visitor_badge_laobi': 'https://visitor-badge.laobi.icu/badge?page_id=admknight.github.io',
-              'visitorbadge_io': 'https://api.visitorbadge.io/api/VisitorHit?user=admknight&repo=portfolio-home',
-              'counter_uwuclxdy': 'https://counter.uwuclxdy.dev/badge?page_id=admknight.github.io',
-              'portfolio_page': 'https://admknight.github.io/',
-              'megarepo_page': 'https://admknight.github.io/CloudstreamExtensions/',
-              'explorer_page': 'https://admknight.github.io/CloudstreamExtensions/explore.html',
-              'bundle_page': 'https://adam-cloudstream-bundles.badass-insane.workers.dev/',
-          }
-          for name, url in targets.items():
-              try:
-                  req = urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0 (CounterQA; +https://github.com/admknight)'})
-                  with urllib.request.urlopen(req, timeout=14) as r:
-                      body = r.read(300000)
-                      content_type = r.headers.get('content-type','')
-                      xml_valid = False
-                      if 'svg' in content_type or body.lstrip().startswith(b'<svg'):
-                          try:
-                              root=ET.fromstring(body)
-                              xml_valid=root.tag.endswith('svg')
-                          except Exception:
-                              pass
-                      print(f'{name}: HTTP {r.status}, type={content_type}, size={len(body)}, svg_valid={xml_valid}, badge_markup={"hits.sh" in body.decode("utf-8","ignore")}')
-                      if name == 'hits_portfolio' and body:
-                          print(f'  body_excerpt={body[:200]!r}')
-              except Exception as e:
-                  print(f'{name}: ERROR {type(e).__name__}: {str(e)[:220]}')
+          import urllib.request
+          import xml.etree.ElementTree as ET
+
+          worker='https://adam-cloudstream-bundles.badass-insane.workers.dev/assets/site-views/'
+          pages=[
+            ('Portfolio','https://admknight.github.io/','portfolio'),
+            ('MegaRepo dashboard','https://admknight.github.io/CloudstreamExtensions/','megarepo'),
+            ('Extension Explorer','https://admknight.github.io/CloudstreamExtensions/explore.html','explorer'),
+            ('Personal Repository Builder','https://adam-cloudstream-bundles.badass-insane.workers.dev/','builder')
+          ]
+          def fetch(url):
+            req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (CounterQA)','Accept':'text/html,image/svg+xml'})
+            with urllib.request.urlopen(req,timeout=20) as response:
+              body=response.read(350000)
+              return response.status,response.headers,body
+
+          for label,page,key in pages:
+            status,headers,body=fetch(page)
+            assert status==200, (label,status)
+            html=body.decode('utf-8')
+            target=worker+key+'.svg'
+            assert target in html, f'{label} footer does not reference new counter'
+            assert 'page-counter' in html, f'{label} page-view footer wrapper missing'
+            status,headers,svg=fetch(target)
+            assert status==200, (label,'badge',status)
+            assert 'image/svg+xml' in headers.get('content-type',''), (label,headers.get('content-type'))
+            assert headers.get('X-Page-Views-Status')=='ok', (label,'count unavailable')
+            root=ET.fromstring(svg)
+            title=root.find('{http://www.w3.org/2000/svg}title')
+            assert title is not None and (title.text or '').startswith('Page views: '), label
+            assert 'unavailable' not in (title.text or ''), label
+            print(f'PASS: {label}: {title.text}; footer linked and counter loaded from own Worker domain')
+          print('SUCCESS: All four published footer counters return visible count SVGs.')
           PY
