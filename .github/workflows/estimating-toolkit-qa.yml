@@ -1,0 +1,74 @@
+name: Validate Open QS Toolkit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'estimating-tools.html'
+      - 'estimating-tools.css'
+      - 'estimating-tools.js'
+      - 'assets/estimating-resources.json'
+      - 'tools/verify_estimating_toolkit.py'
+      - '.github/workflows/estimating-toolkit-qa.yml'
+      - 'index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate curated data and preservation
+        run: python3 tools/verify_estimating_toolkit.py
+      - name: Check JavaScript syntax
+        run: node --check estimating-tools.js
+
+  live:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - name: Verify public GitHub Pages deployment
+        run: |
+          python3 - <<'PY'
+          import json
+          import time
+          import urllib.request
+
+          base = "https://admknight.github.io"
+          checks = {
+            "/estimating-tools.html": [b"Estimate smarter.", b"estimating-tools.js", b"does not mirror"],
+            "/assets/estimating-resources.json": [b'"resources"', b'"opentakeoff"', b'"BuildSuite Core"'],
+            "/estimating-tools.js": [b"categoryControls", b"qs-grid"],
+            "/estimating-tools.css": [b".qs-card", b"@media"],
+            "/": [b"/estimating-tools.html", b"One catalog. Three ways to use it."]
+          }
+
+          for attempt in range(22):
+            try:
+              for path, fragments in checks.items():
+                request = urllib.request.Request(base + path, headers={
+                  "User-Agent": "AdamKnight-QSToolkit-CI/1.0", "Cache-Control": "no-cache"})
+                with urllib.request.urlopen(request, timeout=18) as result:
+                  payload = result.read(300000)
+                  assert result.status == 200, (path, result.status)
+                for required in fragments:
+                  assert required in payload, f"{path}: missing {required!r}"
+                if path.endswith(".json"):
+                  obj = json.loads(payload)
+                  assert len(obj["resources"]) == 16, "Wrong published resource count"
+              print(f"PASS: new QS Toolkit HTML, CSS, JS, data and portfolio links all live (attempt {attempt+1})")
+              break
+            except Exception as exc:
+              if attempt == 21:
+                raise
+              print(f"Waiting for GitHub Pages deployment ({attempt+1}/22): {exc}")
+              time.sleep(12)
+          PY
