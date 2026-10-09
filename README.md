@@ -13,6 +13,8 @@ Source for **https://admknight.github.io/** — the public project hub for Adam 
 
 ## Featured MegaRepo experience
 
+The portfolio's featured section is an interactive three-route showcase, with a one-click full-repository shortcode, direct links to the personal builder and discovery-only Explorer, and counts from the published GitHub catalog report. This changes presentation only: the full repository, builder, and Explorer remain separate services.
+
 Three tools with different outputs: the **Full MegaRepo** is the entire catalog, the **Personal Repository Builder** generates a selected-only repository URL, and the **Extension Explorer** is discovery/bookmarks only. Adding a repository to CloudStream never installs individual plugins automatically.
 
 - **[Full MegaRepo](https://admknight.github.io/CloudstreamExtensions/#install-full):** add the `admknight` repository to CloudStream to access the full catalog, then install individual extensions.
