@@ -16,7 +16,7 @@
   <meta property="og:url" content="https://admknight.github.io/">
   <meta property="og:image" content="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png">
   <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=mega-showcase-v2">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -102,34 +102,105 @@
         <a class="text-link" href="https://admknight.github.io/CloudstreamExtensions/">Project site ↗</a>
       </div>
 
-      <article class="featured-card">
-        <div class="featured-main">
-          <div class="project-icon">
-            <img src="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png" alt="Adam Knight Mega Repo">
+      <article class="featured-card mega-showcase" aria-labelledby="mega-showcase-title">
+        <div class="mega-intro">
+          <div class="mega-identity">
+            <img class="mega-logo" src="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png" alt="Adam Knight Mega Repo logo" width="78" height="78">
+            <div>
+              <p class="mega-overline">CLOUDSTREAM EXTENSIONS · AUTOMATED CATALOG</p>
+              <h3 id="mega-showcase-title">One catalog. Three ways to use it.</h3>
+              <p class="mega-lead">Access the entire repository, build a smaller one with only your choices, or explore the catalog before deciding. Each route does something different.</p>
+            </div>
           </div>
-          <div>
-            <div class="project-title-row">
-              <h3>CloudStream Extensions & Plugins</h3>
-              <span class="release-pill">v1.0.0 stable</span>
-            </div>
-            <p><strong>Three distinct tools, three different results:</strong> Full MegaRepo adds the complete extension catalog using shortcode <code>admknight</code>; Personal Repository Builder generates a selected-only <code>repo.json</code> link; Extension Explorer searches and bookmarks plugins locally without installing anything. Guarded three-hour aggregation and separate hourly package-integrity auditing monitor the catalog.</p>
-            <div class="tags">
-              <span>CloudStream</span><span>Kotlin</span><span>Automation</span><span>GitHub Actions</span>
-            </div>
-            <div class="featured-actions">
-              <a class="btn primary small" href="https://admknight.github.io/CloudstreamExtensions/#install-full">Add full catalog</a>
-              <a class="btn secondary small" href="https://adam-cloudstream-bundles.badass-insane.workers.dev/">Create selected-only repo</a>
-              <a class="btn secondary small" href="https://admknight.github.io/CloudstreamExtensions/explore.html">Browse (no installation)</a>
-              <a class="btn secondary small" href="https://github.com/admknight/CloudstreamExtensions">Source</a>
-              <a class="btn secondary small" href="https://github.com/admknight/CloudstreamExtensions/releases/tag/v1.0.0">v1.0 release</a>
-            </div>
+          <div class="mega-release-info">
+            <span class="release-pill">v1.0.0 stable</span>
+            <a href="https://github.com/admknight/CloudstreamExtensions/releases/tag/v1.0.0">View release ↗</a>
           </div>
         </div>
-        <div class="featured-stats">
-          <div><strong id="cs-plugins">—</strong><span>Plugins</span></div>
-          <div><strong id="cs-sources">—</strong><span>Sources</span></div>
+
+        <div class="featured-stats mega-metrics" aria-label="Latest published MegaRepo statistics">
+          <div><strong id="cs-plugins">—</strong><span>Published plugins</span></div>
+          <div><strong id="cs-sources">—</strong><span>Active sources</span></div>
           <div><strong id="cs-failures">—</strong><span>Package failures</span></div>
           <div><strong id="cs-custom">—</strong><span>Custom providers</span></div>
+        </div>
+
+        <div class="mega-route-heading">
+          <div>
+            <p class="mega-overline">CHOOSE YOUR PATH</p>
+            <h4>What would you like to do?</h4>
+          </div>
+          <p>Three practical options. Nothing installs automatically.</p>
+        </div>
+
+        <div class="mega-paths">
+          <section class="mega-path mega-path-full" aria-labelledby="mega-full-title">
+            <div class="mega-path-top">
+              <span class="mega-path-symbol" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+              </span>
+              <span class="mega-path-kind">01 / FULL CATALOG</span>
+            </div>
+            <h4 id="mega-full-title">Full MegaRepo</h4>
+            <p>Browse every published extension from one repository in CloudStream. Install the individual plugins you want.</p>
+            <div class="mega-demo">
+              <span class="mega-demo-label">CLOUDSTREAM SHORTCODE</span>
+              <div class="mega-shortcode">
+                <input id="mega-shortcode" aria-label="Full MegaRepo shortcode" value="admknight" readonly spellcheck="false">
+                <button id="mega-copy-shortcode" type="button" aria-label="Copy MegaRepo shortcode">Copy</button>
+              </div>
+              <span id="mega-copy-status" class="mega-copy-status" role="status" aria-live="polite">Paste in Settings → Extensions → Add Repository</span>
+            </div>
+            <a class="mega-path-action" href="https://admknight.github.io/CloudstreamExtensions/#install-full">Full repo installation guide <span aria-hidden="true">↗</span></a>
+          </section>
+
+          <section class="mega-path mega-path-personal" aria-labelledby="mega-personal-title">
+            <div class="mega-path-top">
+              <span class="mega-path-symbol" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><path d="M14 6.5h7M17.5 3v7M3 16.5l3 3 5-6M14 18h7"/></svg>
+              </span>
+              <span class="mega-path-kind">02 / YOUR SELECTION</span>
+            </div>
+            <h4 id="mega-personal-title">Personal Repository Builder</h4>
+            <p>Choose up to 100 extensions and generate a separate installable repository link containing only your picks.</p>
+            <div class="mega-demo">
+              <span class="mega-demo-label">WHAT YOU GET</span>
+              <div class="mega-step-chain">
+                <span>Choose plugins</span><span aria-hidden="true">→</span><span>Generate repo.json</span>
+              </div>
+              <span class="mega-demo-hint">No account needed · Selection changes require a new link</span>
+            </div>
+            <a class="mega-path-action" href="https://adam-cloudstream-bundles.badass-insane.workers.dev/">Build my personal repo <span aria-hidden="true">↗</span></a>
+          </section>
+
+          <section class="mega-path mega-path-explore" aria-labelledby="mega-explore-title">
+            <div class="mega-path-top">
+              <span class="mega-path-symbol" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+              </span>
+              <span class="mega-path-kind">03 / DISCOVERY ONLY</span>
+            </div>
+            <h4 id="mega-explore-title">Extension Explorer</h4>
+            <p>Find plugins by name, language, or type and save bookmarks in your browser. This does not create a repository.</p>
+            <div class="mega-demo">
+              <span class="mega-demo-label">EXPLORE BEFORE YOU INSTALL</span>
+              <div class="mega-filter-chips"><span>Search</span><span>Filter</span><span>Bookmark</span></div>
+              <span class="mega-demo-hint">Bookmarks are local and do not transfer to the builder</span>
+            </div>
+            <a class="mega-path-action" href="https://admknight.github.io/CloudstreamExtensions/explore.html">Explore the catalog <span aria-hidden="true">↗</span></a>
+          </section>
+        </div>
+
+        <div class="mega-bottom">
+          <div class="mega-refresh-line">
+            <span class="mega-fresh-dot" aria-hidden="true"></span>
+            <span id="mega-refresh">Checking latest published catalog…</span>
+          </div>
+          <div class="mega-secondary-links">
+            <a href="https://admknight.github.io/CloudstreamExtensions/#health">View catalog health ↗</a>
+            <a href="https://github.com/admknight/CloudstreamExtensions">GitHub source ↗</a>
+          </div>
+          <p class="mega-footnote">Package availability is not a guarantee that a provider's website or streams work.</p>
         </div>
       </article>
     </section>
@@ -204,6 +275,6 @@
     <span>Built on GitHub Pages · <a href="https://github.com/admknight/admknight.github.io">Source</a></span>
   </footer>
 
-  <script src="/script.js" defer></script>
+  <script src="/script.js?v=mega-showcase-v2" defer></script>
 </body>
 </html>
