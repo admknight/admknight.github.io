@@ -13,6 +13,8 @@ Source for **https://admknight.github.io/** — the public project hub for Adam 
 
 ## Featured MegaRepo experience
 
+Three tools with different outputs: the **Full MegaRepo** is the entire catalog, the **Personal Repository Builder** generates a selected-only repository URL, and the **Extension Explorer** is discovery/bookmarks only. Adding a repository to CloudStream never installs individual plugins automatically.
+
 - **[Full MegaRepo](https://admknight.github.io/CloudstreamExtensions/#install-full):** add the `admknight` repository to CloudStream to access the full catalog, then install individual extensions.
 - **[Personal Repository Builder](https://adam-cloudstream-bundles.badass-insane.workers.dev/):** choose up to 100 extensions and generate a personal installable repository URL. Plugins are not installed automatically.
 - **[Extension Explorer](https://admknight.github.io/CloudstreamExtensions/explore.html):** search, filter, and bookmark extension names. Bookmarks are local reference notes, not installable repositories.
