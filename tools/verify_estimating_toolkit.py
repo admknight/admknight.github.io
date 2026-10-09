@@ -46,8 +46,8 @@ def verify():
     for anchor in ('id="qs-grid"', 'id="qs-categories"', 'id="qs-query"',
                    'id="qs-deployment"', 'id="qs-result-count"', 'id="qs-empty"'):
         assert anchor in page, f"Missing interactive component: {anchor}"
-    assert '<script src="/estimating-tools.js?v=1" defer></script>' in page
-    assert 'href="/estimating-tools.css?v=1"' in page
+    assert '<script src="/estimating-tools.js?v=2" defer></script>' in page
+    assert 'href="/estimating-tools.css?v=2"' in page
     assert "assets/estimating-resources.json" in script
     assert "<strong id=\"qs-total\">54</strong>" in page
     assert "compatibleWith" in script and "ai-skills-mcp" in script
