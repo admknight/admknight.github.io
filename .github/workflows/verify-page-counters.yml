@@ -1,0 +1,50 @@
+name: Verify page view badge providers
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/verify-page-counters.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Probe image services and deployed pages
+        run: |
+          python3 - <<'PY'
+          import urllib.request, urllib.error, xml.etree.ElementTree as ET
+          targets = {
+              'hits_portfolio': 'https://hits.sh/admknight.github.io.svg?style=flat-square&label=Page+views&color=43a7ff&labelColor=18263a',
+              'hits_example': 'https://hits.sh/github.com/silentsoft/hits.svg',
+              'visitor_badge_laobi': 'https://visitor-badge.laobi.icu/badge?page_id=admknight.github.io',
+              'visitorbadge_io': 'https://api.visitorbadge.io/api/VisitorHit?user=admknight&repo=portfolio-home',
+              'counter_uwuclxdy': 'https://counter.uwuclxdy.dev/badge?page_id=admknight.github.io',
+              'portfolio_page': 'https://admknight.github.io/',
+              'megarepo_page': 'https://admknight.github.io/CloudstreamExtensions/',
+              'explorer_page': 'https://admknight.github.io/CloudstreamExtensions/explore.html',
+              'bundle_page': 'https://adam-cloudstream-bundles.badass-insane.workers.dev/',
+          }
+          for name, url in targets.items():
+              try:
+                  req = urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0 (CounterQA; +https://github.com/admknight)'})
+                  with urllib.request.urlopen(req, timeout=14) as r:
+                      body = r.read(300000)
+                      content_type = r.headers.get('content-type','')
+                      xml_valid = False
+                      if 'svg' in content_type or body.lstrip().startswith(b'<svg'):
+                          try:
+                              root=ET.fromstring(body)
+                              xml_valid=root.tag.endswith('svg')
+                          except Exception:
+                              pass
+                      print(f'{name}: HTTP {r.status}, type={content_type}, size={len(body)}, svg_valid={xml_valid}, badge_markup={"hits.sh" in body.decode("utf-8","ignore")}')
+                      if name == 'hits_portfolio' and body:
+                          print(f'  body_excerpt={body[:200]!r}')
+              except Exception as e:
+                  print(f'{name}: ERROR {type(e).__name__}: {str(e)[:220]}')
+          PY
