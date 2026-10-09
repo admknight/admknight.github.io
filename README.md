@@ -11,6 +11,14 @@ Source for **https://admknight.github.io/** — the public project hub for Adam 
 - Includes responsive styling, SEO metadata, `robots.txt`, and a sitemap.
 - Links project-specific pages such as **https://admknight.github.io/CloudstreamExtensions/**.
 
+## Featured MegaRepo experience
+
+- **[Full MegaRepo](https://admknight.github.io/CloudstreamExtensions/#install-full):** add the `admknight` repository to CloudStream to access the full catalog, then install individual extensions.
+- **[Personal Repository Builder](https://adam-cloudstream-bundles.badass-insane.workers.dev/):** choose up to 100 extensions and generate a personal installable repository URL. Plugins are not installed automatically.
+- **[Extension Explorer](https://admknight.github.io/CloudstreamExtensions/explore.html):** search, filter, and bookmark extension names. Bookmarks are local reference notes, not installable repositories.
+
+The project also runs guarded aggregation every three hours and a separate read-only hourly package-integrity audit.
+
 ## Updating
 
 The repository directory is dynamic, so newly created public GitHub repositories appear automatically without editing the page.
