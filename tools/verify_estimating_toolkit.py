@@ -65,7 +65,7 @@ def verify():
     assert 'id="qs-access"' in page and 'value="Noncommercial Data"' in page
     assert "allowedAccess" in script and "item.accessLevel" in script
     assert "compatibleWith" in script and "ai-skills-mcp" in script
-    assert "ChatGPT-compatible prompt packs" in page
+    assert "PERSONAL USE" in page and "Noncommercial Data" in page and "original authors" in page
     assert "replaceChildren(...nodes)" in script and ".textContent" in script
     assert "new URL(item.source)" in script and "'noopener noreferrer'" in script
     assert "prefers-reduced-motion" in css
