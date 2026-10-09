@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "checkedOn": "2026-10-09",
+  "owner": "Adam Knight",
+  "site": "https://admknight.github.io/estimating-tools.html",
+  "attribution": "Independent third-party software listing. Original authors retain copyright and licenses.",
+  "methodology": "Repository metadata and project README reviewed; not a claim of executed or security-audited software.",
+  "categories": [
+    {
+      "id": "drawing-takeoff",
+      "label": "Drawing Takeoff"
+    },
+    {
+      "id": "bim-qto",
+      "label": "BIM & IFC Quantities"
+    },
+    {
+      "id": "rates-estimating",
+      "label": "BOQ & Rate Analysis"
+    },
+    {
+      "id": "contract-controls",
+      "label": "Contracts & Project Controls"
+    },
+    {
+      "id": "automation",
+      "label": "Automation Libraries"
+    }
+  ],
+  "resources": [
+    {
+      "id": "opentakeoff",
+      "name": "OpenTakeoff",
+      "category": "drawing-takeoff",
+      "mode": "Browser",
+      "license": "Apache-2.0",
+      "source": "https://github.com/Kentucky-ai/opentakeoff",
+      "summary": "PDF drawing measurement for area, length, counts and trade quantities, with CSV/Excel exports and agent-ready MCP tooling.",
+      "caution": "Static browser deployment is documented. One-Click automatic room detection is currently gated by the upstream project; manual polygons remain available.",
+      "demo": "https://opentakeoff.kentucky-ai.com",
+      "tags": [
+        "pdf",
+        "flooring",
+        "walls",
+        "count",
+        "scale",
+        "mcp",
+        "xlsx"
+      ],
+      "featured": true
+    },
+    {
+      "id": "openconstructionerp",
+      "name": "OpenConstructionERP",
+      "category": "rates-estimating",
+      "mode": "Self-hosted",
+      "license": "AGPL-3.0",
+      "source": "https://github.com/datadrivenconstruction/OpenConstructionERP",
+      "summary": "BOQ editing, composite rates, assemblies, PDF/CAD/BIM quantities, and cost/project management.",
+      "caution": "Large backend application; not deployable on GitHub Pages alone. Verify regional prices and cost-database licensing before professional use.",
+      "demo": "https://openconstructionerp.com",
+      "tags": [
+        "boq",
+        "rate analysis",
+        "cost database",
+        "bim",
+        "pdf",
+        "erp",
+        "procurement"
+      ],
+      "featured": true
+    },
+    {
+      "id": "bidwright",
+      "name": "Bidwright",
+      "category": "rates-estimating",
+      "mode": "Self-hosted",
+      "license": "AGPL-3.0",
+      "source": "https://github.com/braedonsaunders/bidwright",
+      "summary": "AI-assisted bid intake, PDF and model takeoff, rate schedules, labor burdens, assemblies and quotations.",
+      "caution": "Requires Docker and a multi-service stack; AI providers may require separate credentials or paid usage. New and changing quickly.",
+      "tags": [
+        "estimating",
+        "labor",
+        "burden",
+        "assemblies",
+        "rates",
+        "mcp",
+        "bid"
+      ],
+      "featured": false
+    },
+    {
+      "id": "construction-tender-assembly-builder",
+      "name": "Construction Tender Assembly Builder",
+      "category": "rates-estimating",
+      "mode": "Browser",
+      "license": "Apache-2.0",
+      "source": "https://github.com/HyVoid/construction-estimating",
+      "summary": "Browser estimating tool for BOQ normalization, historical assemblies, cost codes, and rate/productivity adjustments.",
+      "caution": "Small recent project; the separate Excel workbench advertised by the author is a commercial download, not automatically included in the repository.",
+      "demo": "https://hyvoid.github.io/construction-estimating/",
+      "tags": [
+        "boq",
+        "rates",
+        "assemblies",
+        "excel",
+        "cost code",
+        "tender"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ifcopenshell-ifc5d",
+      "name": "IfcOpenShell / Ifc5D",
+      "category": "bim-qto",
+      "mode": "Python",
+      "license": "LGPL-3.0 (Ifc5D)",
+      "source": "https://github.com/IfcOpenShell/IfcOpenShell",
+      "summary": "IFC quantity and cost automation, schedules of rates, cost items and structured CSV/Excel outputs.",
+      "caution": "Development toolkit; requires IFC models and Python/IFC knowledge, not a point-and-click PDF takeoff application.",
+      "tags": [
+        "ifc",
+        "ifc5d",
+        "bim",
+        "qto",
+        "boq",
+        "rates",
+        "csv",
+        "xlsx"
+      ],
+      "featured": true
+    },
+    {
+      "id": "freecad-bim",
+      "name": "FreeCAD BIM",
+      "category": "bim-qto",
+      "mode": "Desktop",
+      "license": "LGPL-2.1",
+      "source": "https://github.com/FreeCAD/FreeCAD",
+      "summary": "Open-source parametric CAD/BIM application with integrated BIM workbench and quantity-oriented model workflows.",
+      "caution": "The historical standalone BIM_Workbench addon is obsolete for FreeCAD 1.0+; BIM is integrated into FreeCAD itself.",
+      "demo": "https://www.freecad.org/",
+      "tags": [
+        "cad",
+        "bim",
+        "3d",
+        "ifc",
+        "quantity",
+        "model"
+      ],
+      "featured": true
+    },
+    {
+      "id": "qto-buccaneer",
+      "name": "QTO Buccaneer",
+      "category": "bim-qto",
+      "mode": "Python",
+      "license": "MIT",
+      "source": "https://github.com/simondilhas/qto_buccaneer",
+      "summary": "Python quantity takeoff from IFC models with spreadsheet exports, metrics and reusable workflows.",
+      "caution": "Requires a working IFC model and Python dependencies; check measurement classification and model completeness.",
+      "tags": [
+        "ifc",
+        "python",
+        "quantities",
+        "excel",
+        "report"
+      ],
+      "featured": false
+    },
+    {
+      "id": "freecad-bill-of-materials-workbench",
+      "name": "FreeCAD Bill of Materials Workbench",
+      "category": "bim-qto",
+      "mode": "Add-on",
+      "license": "LGPL-3.0",
+      "source": "https://github.com/APEbbers/BillOfMaterials-WB",
+      "summary": "FreeCAD assembly-part bills of materials, including summary BOM and raw material item exports.",
+      "caution": "A BOM is not necessarily a priced construction BOQ; verify quantity units and assembly scope.",
+      "tags": [
+        "freecad",
+        "bom",
+        "assemblies",
+        "takeoff",
+        "excel"
+      ],
+      "featured": false
+    },
+    {
+      "id": "pycostestimates-pyrevit",
+      "name": "PyCostEstimates (pyRevit)",
+      "category": "rates-estimating",
+      "mode": "Add-on",
+      "license": "MIT",
+      "source": "https://github.com/SwanaWJ/pyrevit-CostEstimates.extension",
+      "summary": "Revit model quantities, composite unit-rate buildup, cost assignment and BOQ export.",
+      "caution": "Requires Autodesk Revit and pyRevit; Revit itself is proprietary and must be licensed separately.",
+      "tags": [
+        "revit",
+        "rate analysis",
+        "boq",
+        "material",
+        "quantities"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ezdxf",
+      "name": "ezdxf",
+      "category": "automation",
+      "mode": "Python",
+      "license": "MIT",
+      "source": "https://github.com/mozman/ezdxf",
+      "summary": "Programmatic reading, creation and analysis of DXF geometry for bespoke CAD takeoff workflows.",
+      "caution": "DXF geometry does not automatically establish construction pay quantities; layers, units and assemblies need project-specific rules.",
+      "demo": "https://ezdxf.readthedocs.io/",
+      "tags": [
+        "dxf",
+        "cad",
+        "python",
+        "linear",
+        "area",
+        "material"
+      ],
+      "featured": true
+    },
+    {
+      "id": "pdfplumber",
+      "name": "pdfplumber",
+      "category": "automation",
+      "mode": "Python",
+      "license": "MIT",
+      "source": "https://github.com/jsvine/pdfplumber",
+      "summary": "Extract tables, text and document geometry from PDF BOQs, tender documents and schedules.",
+      "caution": "PDF extraction needs reconciliation against original documents; this library is not a finished drawing takeoff application.",
+      "tags": [
+        "pdf",
+        "tables",
+        "boq",
+        "specification",
+        "python"
+      ],
+      "featured": false
+    },
+    {
+      "id": "buildsuite-core",
+      "name": "BuildSuite Core",
+      "category": "contract-controls",
+      "mode": "Add-on",
+      "license": "MIT",
+      "source": "https://github.com/BuildSuite-io/buildsuite_core",
+      "summary": "ERPNext construction addon for BOQ trees, rate libraries, measurement books and subcontract payment processes.",
+      "caution": "Explicitly marked beta by its maintainer; requires a Frappe/ERPNext instance and suitable accounting configuration.",
+      "tags": [
+        "subcontract",
+        "progress billing",
+        "measurement",
+        "rate library",
+        "retention"
+      ],
+      "featured": true
+    },
+    {
+      "id": "openproject-community",
+      "name": "OpenProject Community",
+      "category": "contract-controls",
+      "mode": "Self-hosted",
+      "license": "GPL-3.0",
+      "source": "https://github.com/opf/openproject",
+      "summary": "Project scheduling, work packages, time records, budgeting, reporting and controlled team collaboration.",
+      "caution": "Project controls system, not a FIDIC clause interpreter or a dedicated construction variation-valuation engine.",
+      "demo": "https://www.openproject.org/community-edition/",
+      "tags": [
+        "project management",
+        "budget",
+        "schedule",
+        "tracking",
+        "issue"
+      ],
+      "featured": false
+    },
+    {
+      "id": "construction-project-control-web-app",
+      "name": "Construction Project Control Web App",
+      "category": "contract-controls",
+      "mode": "Browser",
+      "license": "Apache-2.0",
+      "source": "https://github.com/HyVoid/construction-project-management-excel",
+      "summary": "Single-project budget, progress billing, change-order tracking, retainage and cash-flow demonstration.",
+      "caution": "Browser code is public; the separate downloadable Excel template is advertised commercially. Do not confuse the two.",
+      "demo": "https://hyvoid.github.io/construction-project-management-excel/",
+      "tags": [
+        "change order",
+        "variation",
+        "sov",
+        "retention",
+        "cash flow",
+        "cost"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ai-skills-for-construction",
+      "name": "AI Skills for Construction",
+      "category": "automation",
+      "mode": "Python",
+      "license": "MIT",
+      "source": "https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction",
+      "summary": "Prompt and agent-workflow examples for construction data, BIM analysis, document controls and estimating.",
+      "caution": "An AI skill collection is guidance, not a verified quantity calculation or contractual entitlement determination.",
+      "tags": [
+        "ai",
+        "automation",
+        "prompts",
+        "document control",
+        "qto"
+      ],
+      "featured": false
+    },
+    {
+      "id": "quantitytakeoff-python-examples",
+      "name": "QuantityTakeoff-Python examples",
+      "category": "automation",
+      "mode": "Python",
+      "license": "GPL-3.0",
+      "source": "https://github.com/datadrivenconstruction/QuantityTakeoff-Python",
+      "summary": "Small Python quantity takeoff examples for grouping and filtering construction model elements.",
+      "caution": "Older learning material (last repository activity reviewed from 2023); not recommended as a production takeoff engine.",
+      "tags": [
+        "python",
+        "quantity",
+        "learning",
+        "bim",
+        "group"
+      ],
+      "featured": false
+    }
+  ]
+}
