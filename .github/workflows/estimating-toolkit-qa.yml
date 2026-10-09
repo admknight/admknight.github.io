@@ -63,7 +63,8 @@ jobs:
                   assert required in payload, f"{path}: missing {required!r}"
                 if path.endswith(".json"):
                   obj = json.loads(payload)
-                  assert len(obj["resources"]) == 16, "Wrong published resource count"
+                  assert len(obj["resources"]) == 54, "Wrong published resource count"
+                  assert sum(r["category"] == "ai-skills-mcp" for r in obj["resources"]) == 16, "AI skills missing"
               print(f"PASS: new QS Toolkit HTML, CSS, JS, data and portfolio links all live (attempt {attempt+1})")
               break
             except Exception as exc:

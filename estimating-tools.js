@@ -19,11 +19,13 @@
     'bim-qto': {name:'BIM & IFC Quantities',symbol:'⬡'},
     'rates-estimating': {name:'BOQ & Rate Analysis',symbol:'∑'},
     'contract-controls': {name:'Contracts & Project Controls',symbol:'▤'},
-    'automation': {name:'Automation Libraries',symbol:'{ }'}
+    'automation': {name:'Automation Libraries',symbol:'{ }'},
+    'survey-earthworks': {name:'Survey & Earthworks',symbol:'⌁'},
+    'ai-skills-mcp': {name:'AI Skills & MCP',symbol:'✧'}
   };
 
   const state = {resources:[],category:'all',term:'',mode:'all'};
-  const allowedModes = new Set(['Browser','Desktop','Self-hosted','Python','Add-on']);
+  const allowedModes = new Set(['Browser','Desktop','Self-hosted','Python','Add-on','SDK','AI Skill','MCP Server','Prompt Pack']);
   const label = (tag, className, value) => {
     const element = document.createElement(tag);
     if (className) element.className = className;
@@ -53,7 +55,7 @@
           !item.summary || !item.source) {
         throw new Error('Catalog contains invalid or duplicated resources');
       }
-      if (!new URL(item.source).hostname.endsWith('github.com')) {
+      if (new URL(item.source).hostname !== 'github.com') {
         throw new Error('Original GitHub source link is required');
       }
       if (item.demo && new URL(item.demo).protocol !== 'https:') {
@@ -80,6 +82,9 @@
     wrapper.append(label('h3','',item.name));
     wrapper.append(label('span','qs-card-kind',categories[item.category].name));
     wrapper.append(label('p','',item.summary));
+    if (Array.isArray(item.compatibleWith) && item.compatibleWith.length) {
+      wrapper.append(label('p','qs-compat','Compatible: '+item.compatibleWith.join(' · ')));
+    }
     wrapper.append(label('p','qs-card-note',item.caution));
     const bottom = label('div','qs-card-bottom');
     bottom.append(label('span','qs-platform',item.mode));
@@ -97,7 +102,7 @@
       if (state.category !== 'all' && item.category !== state.category) return false;
       if (state.mode !== 'all' && item.mode !== state.mode) return false;
       if (!term) return true;
-      const haystack = [item.name,item.category,item.summary,item.caution,item.license,item.mode,...(item.tags || [])].join(' ').toLowerCase();
+      const haystack = [item.name,item.category,item.summary,item.caution,item.license,item.mode,...(item.tags || []),...(item.compatibleWith || [])].join(' ').toLowerCase();
       return haystack.includes(term);
     }).sort((a,b) => (Number(b.featured) - Number(a.featured)) || a.name.localeCompare(b.name));
     const nodes = matched.map(card);
