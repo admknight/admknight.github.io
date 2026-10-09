@@ -4,7 +4,7 @@
   "owner": "Adam Knight",
   "site": "https://admknight.github.io/estimating-tools.html",
   "attribution": "Independent third-party software listing. Original authors retain copyright and licenses.",
-  "methodology": "Repository metadata and project README reviewed; not a claim of executed or security-audited software.",
+  "methodology": "54 distinct repositories, source README/repository metadata and available licenses reviewed as of 2026-10-09. Linked projects are not execution-tested, security-audited or calculation-certified by this directory.",
   "categories": [
     {
       "id": "drawing-takeoff",
@@ -25,6 +25,14 @@
     {
       "id": "automation",
       "label": "Automation Libraries"
+    },
+    {
+      "id": "survey-earthworks",
+      "label": "Survey & Earthworks"
+    },
+    {
+      "id": "ai-skills-mcp",
+      "label": "AI Skills & MCP"
     }
   ],
   "resources": [
@@ -303,7 +311,7 @@
     {
       "id": "ai-skills-for-construction",
       "name": "AI Skills for Construction",
-      "category": "automation",
+      "category": "ai-skills-mcp",
       "mode": "Python",
       "license": "MIT",
       "source": "https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction",
@@ -316,7 +324,12 @@
         "document control",
         "qto"
       ],
-      "featured": false
+      "featured": false,
+      "compatibleWith": [
+        "Claude Code",
+        "Codex",
+        "Other AI coding assistants"
+      ]
     },
     {
       "id": "quantitytakeoff-python-examples",
@@ -335,6 +348,729 @@
         "group"
       ],
       "featured": false
+    },
+    {
+      "id": "quantity-surveyor-ai-skill",
+      "name": "Quantity Surveyor AI Skill",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "MIT",
+      "source": "https://github.com/MuscleOtter/quantity-surveyor",
+      "summary": "Portable QS takeoff, unit-rate build-up, tender comparison, variation and cash-flow instructions.",
+      "caution": "Requires a suitable AI host. It does not independently measure drawings or guarantee exports.",
+      "tags": [
+        "qs",
+        "takeoff",
+        "rate",
+        "variation",
+        "estimate"
+      ],
+      "featured": true,
+      "compatibleWith": [
+        "Claude",
+        "Claude Code",
+        "Codex",
+        "ChatGPT (instructions)"
+      ]
+    },
+    {
+      "id": "claude-2d-pdf-to-priced-boq",
+      "name": "Claude 2D PDF to Priced BOQ",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "MIT",
+      "source": "https://github.com/hamzaabduljabbar/autoconst-claude-2d-pdf-to-priced-boq",
+      "summary": "Claude Code pipeline from vector PDF/DXF quantities to trade-based Excel BOQs with your own rates.",
+      "caution": "Scanned sheets may lack vector information; check quantity evidence, scale and rates.",
+      "tags": [
+        "claude",
+        "pdf",
+        "dxf",
+        "boq",
+        "rebar",
+        "pricing"
+      ],
+      "featured": true,
+      "compatibleWith": [
+        "Claude Code"
+      ]
+    },
+    {
+      "id": "construction-agent-skills-28",
+      "name": "Construction Agent Skills (28)",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "CC BY 4.0",
+      "source": "https://github.com/constructelligence-lab/construction-agent-skills",
+      "summary": "Twenty-eight construction agent workflows for estimating checks, bids, takeoff and commercial tasks.",
+      "caution": "Instructions are not an autonomous geometry or pricing engine.",
+      "tags": [
+        "claude",
+        "skills",
+        "rate",
+        "takeoff",
+        "bid",
+        "contracts"
+      ],
+      "featured": true,
+      "compatibleWith": [
+        "Claude",
+        "Claude Code"
+      ]
+    },
+    {
+      "id": "construction-reference-mcp",
+      "name": "Construction Reference MCP",
+      "category": "ai-skills-mcp",
+      "mode": "MCP Server",
+      "license": "MIT (code) / CC BY 4.0 (data)",
+      "source": "https://github.com/constructelligence-lab/construction-mcp",
+      "summary": "Offline MCP calculators for concrete, earthwork, rebar, waste, markup, retainage and unit references.",
+      "caution": "Generic factors and cost codes must be validated against actual specifications.",
+      "tags": [
+        "mcp",
+        "concrete",
+        "units",
+        "rebar",
+        "retention",
+        "earthwork"
+      ],
+      "featured": true,
+      "compatibleWith": [
+        "Claude Code",
+        "Claude Desktop",
+        "MCP clients"
+      ]
+    },
+    {
+      "id": "construction-prompts-for-chatgpt-claude",
+      "name": "Construction Prompts for ChatGPT & Claude",
+      "category": "ai-skills-mcp",
+      "mode": "Prompt Pack",
+      "license": "CC BY 4.0",
+      "source": "https://github.com/constructelligence-lab/construction-prompts",
+      "summary": "Structured ChatGPT/Claude prompts for RFI, takeoff review, pricing, notices and change orders.",
+      "caution": "Prompt pack only, not a native installable ChatGPT plugin or an executable estimator.",
+      "tags": [
+        "chatgpt",
+        "claude",
+        "prompts",
+        "rfi",
+        "claims",
+        "change order"
+      ],
+      "featured": true,
+      "compatibleWith": [
+        "ChatGPT (instructions)",
+        "Claude"
+      ]
+    },
+    {
+      "id": "qs-skills-anzsmm-and-acmm",
+      "name": "QS Skills — ANZSMM and ACMM",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "MIT",
+      "source": "https://github.com/kuikiun/qs-skills",
+      "summary": "Nineteen quantity-surveying skills for Australian measurement and elemental cost planning.",
+      "caution": "Measurement standards are jurisdiction-specific and may be copyrighted; consult authoritative licensed standards.",
+      "tags": [
+        "claude",
+        "anzsmm",
+        "acmm",
+        "boq",
+        "measurement"
+      ],
+      "featured": false,
+      "compatibleWith": [
+        "Claude Code"
+      ]
+    },
+    {
+      "id": "construction-pm-claude-plugin",
+      "name": "Construction PM Claude Plugin",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "MIT",
+      "source": "https://github.com/JamesJ2993/construction-pm",
+      "summary": "Claude Code plugin for drawings, issue registers, tenders, claims and PM reviews.",
+      "caution": "Requires local Python dependencies; never substitute for signed contract terms.",
+      "tags": [
+        "claude",
+        "plugin",
+        "claims",
+        "contract",
+        "rfi",
+        "register"
+      ],
+      "featured": false,
+      "compatibleWith": [
+        "Claude Code"
+      ]
+    },
+    {
+      "id": "bonsai-mcp-blender-bim",
+      "name": "Bonsai MCP (Blender BIM)",
+      "category": "ai-skills-mcp",
+      "mode": "MCP Server",
+      "license": "MIT",
+      "source": "https://github.com/Show2Instruct/bonsai-mcp",
+      "summary": "MCP integration for AI-assisted Blender/Bonsai BIM and IFC model tasks.",
+      "caution": "Needs Blender/Bonsai setup. Check model geometry and measured output.",
+      "tags": [
+        "mcp",
+        "ifc",
+        "bim",
+        "blender",
+        "model"
+      ],
+      "featured": false,
+      "compatibleWith": [
+        "Claude",
+        "MCP clients"
+      ]
+    },
+    {
+      "id": "ifcmcp",
+      "name": "ifcMCP",
+      "category": "ai-skills-mcp",
+      "mode": "MCP Server",
+      "license": "Apache-2.0",
+      "source": "https://github.com/smartaec/ifcMCP",
+      "summary": "Query IFC elements, properties, locations and spatial structure using an MCP client.",
+      "caution": "Python, IfcOpenShell and an IFC file required; not a complete priced BOQ.",
+      "tags": [
+        "ifc",
+        "mcp",
+        "bim",
+        "quantity",
+        "property"
+      ],
+      "featured": false,
+      "compatibleWith": [
+        "Claude",
+        "MCP clients"
+      ]
+    },
+    {
+      "id": "ifc-mcp-analysis-server",
+      "name": "IFC-MCP Analysis Server",
+      "category": "ai-skills-mcp",
+      "mode": "MCP Server",
+      "license": "MIT",
+      "source": "https://github.com/ekkodale/IFC-MCP",
+      "summary": "Structured building-model queries, count/area analyses and IFC aggregation with MCP.",
+      "caution": "Confirm IFC units and categories before cost takeoff.",
+      "tags": [
+        "mcp",
+        "ifc",
+        "bim",
+        "area",
+        "counts"
+      ],
+      "featured": false,
+      "compatibleWith": [
+        "MCP clients"
+      ]
+    },
+    {
+      "id": "autocad-mcp-pro",
+      "name": "AutoCAD MCP Pro",
+      "category": "ai-skills-mcp",
+      "mode": "MCP Server",
+      "license": "MIT",
+      "source": "https://github.com/U-C4N/Autocad-MCP",
+      "summary": "Automate AutoCAD through Windows COM or a headless ezdxf engine for drawing inspection.",
+      "caution": "Live CAD requires a licensed Windows AutoCAD installation; DXF headless mode differs.",
+      "tags": [
+        "autocad",
+        "dxf",
+        "cad",
+        "mcp",
+        "area"
+      ],
+      "featured": false,
+      "compatibleWith": [
+        "Claude",
+        "MCP clients"
+      ]
+    },
+    {
+      "id": "cad-mcp-server",
+      "name": "CAD-MCP Server",
+      "category": "ai-skills-mcp",
+      "mode": "MCP Server",
+      "license": "MIT",
+      "source": "https://github.com/daobataotie/CAD-MCP",
+      "summary": "AI-driven CAD drawing, layer and block management through MCP tools.",
+      "caution": "Requires supported installed CAD software; approve modifications before use.",
+      "tags": [
+        "cad",
+        "autocad",
+        "mcp",
+        "drawing"
+      ],
+      "featured": false,
+      "compatibleWith": [
+        "Claude Desktop",
+        "MCP clients"
+      ]
+    },
+    {
+      "id": "qcad-mcp",
+      "name": "QCAD MCP",
+      "category": "ai-skills-mcp",
+      "mode": "MCP Server",
+      "license": "MIT",
+      "source": "https://github.com/sandraschi/qcad-mcp",
+      "summary": "Plan and DXF processing with ezdxf and optional QCAD Pro AI operations.",
+      "caution": "Some operations require the separately paid QCAD Pro product.",
+      "tags": [
+        "qcad",
+        "dxf",
+        "plan",
+        "mcp"
+      ],
+      "featured": false,
+      "compatibleWith": [
+        "MCP clients"
+      ]
+    },
+    {
+      "id": "boq-mcp-for-claude",
+      "name": "BOQ MCP for Claude",
+      "category": "ai-skills-mcp",
+      "mode": "MCP Server",
+      "license": "MIT",
+      "source": "https://github.com/jehadbaniodeh/boq-mcp",
+      "summary": "Claude tools for BOQ sections, quantities, cost items, bills and contractor records.",
+      "caution": "Requires a separately hosted BOQ/Tendix account and API, not a local BOQ app.",
+      "tags": [
+        "boq",
+        "claude",
+        "mcp",
+        "bill",
+        "tender"
+      ],
+      "featured": false,
+      "compatibleWith": [
+        "Claude Code",
+        "Claude Desktop"
+      ]
+    },
+    {
+      "id": "construction-takeoff-client-plugins",
+      "name": "Construction Takeoff Client Plugins",
+      "category": "ai-skills-mcp",
+      "mode": "AI Skill",
+      "license": "MIT",
+      "source": "https://github.com/masonearl/construction-takeoff-plugins",
+      "summary": "Claude/Codex plugin manifests and setup for Construction Takeoff integrations.",
+      "caution": "Mac-only release candidate; separately licensed Takeoff app and companion required.",
+      "tags": [
+        "claude",
+        "codex",
+        "takeoff",
+        "plugin",
+        "mac"
+      ],
+      "featured": false,
+      "compatibleWith": [
+        "Claude Code",
+        "Codex",
+        "Claude Desktop"
+      ]
+    },
+    {
+      "id": "bimserver",
+      "name": "BIMserver",
+      "category": "bim-qto",
+      "mode": "Self-hosted",
+      "license": "AGPL-3.0",
+      "source": "https://github.com/opensourceBIM/BIMserver",
+      "summary": "IFC model server with revisions and downstream structured-quantity integrations.",
+      "caution": "Java backend/server, not a completed estimating application.",
+      "tags": [
+        "bim",
+        "ifc",
+        "model",
+        "server"
+      ],
+      "featured": false
+    },
+    {
+      "id": "that-open-web-ifc",
+      "name": "That Open web-ifc",
+      "category": "bim-qto",
+      "mode": "SDK",
+      "license": "MPL-2.0",
+      "source": "https://github.com/ThatOpen/engine_web-ifc",
+      "summary": "JavaScript/WebAssembly IFC parser for web quantity extraction applications.",
+      "caution": "Developer SDK; you must build and validate the measurement workflow.",
+      "tags": [
+        "ifc",
+        "wasm",
+        "javascript",
+        "bim"
+      ],
+      "featured": false
+    },
+    {
+      "id": "that-open-components",
+      "name": "That Open Components",
+      "category": "bim-qto",
+      "mode": "SDK",
+      "license": "MIT",
+      "source": "https://github.com/ThatOpen/engine_components",
+      "summary": "Browser BIM viewer/measurement components to incorporate into custom QS tools.",
+      "caution": "Building a full BOQ system still requires your own interface and logic.",
+      "tags": [
+        "bim",
+        "ifc",
+        "viewer",
+        "measurement"
+      ],
+      "featured": false
+    },
+    {
+      "id": "bimsurfer",
+      "name": "BIMsurfer",
+      "category": "bim-qto",
+      "mode": "Browser",
+      "license": "MIT",
+      "source": "https://github.com/opensourceBIM/BIMsurfer",
+      "summary": "Web-based IFC model viewer for reviewing quantities in 3D.",
+      "caution": "Viewer only; cannot deliver costed BOQs by itself.",
+      "tags": [
+        "ifc",
+        "bim",
+        "viewer"
+      ],
+      "featured": false
+    },
+    {
+      "id": "bldrs-share",
+      "name": "Bldrs Share",
+      "category": "bim-qto",
+      "mode": "Browser",
+      "license": "AGPL-3.0",
+      "source": "https://github.com/bldrs-ai/Share",
+      "summary": "Online IFC/CAD model review, visualization and collaboration.",
+      "caution": "Not an estimating package; verify AGPL requirements before hosting.",
+      "tags": [
+        "ifc",
+        "cad",
+        "collaboration",
+        "viewer"
+      ],
+      "featured": false
+    },
+    {
+      "id": "qgis",
+      "name": "QGIS",
+      "category": "survey-earthworks",
+      "mode": "Desktop",
+      "license": "GPL-2.0",
+      "source": "https://github.com/qgis/QGIS",
+      "summary": "Open-source GIS site-area and terrain measurement environment.",
+      "caution": "CRS, survey quality and vertical datum affect volumes and plan quantities.",
+      "tags": [
+        "gis",
+        "survey",
+        "earthwork",
+        "area"
+      ],
+      "featured": true
+    },
+    {
+      "id": "earthworkq-qgis-plugin",
+      "name": "EarthWorkQ QGIS Plugin",
+      "category": "survey-earthworks",
+      "mode": "Add-on",
+      "license": "GPL-3.0",
+      "source": "https://github.com/rahulpandey696/EarthWorkQ",
+      "summary": "QGIS earthwork cut/fill calculation and earth-volume reports.",
+      "caution": "Early-stage project; independently check surface and cut/fill methodology.",
+      "tags": [
+        "qgis",
+        "earthwork",
+        "cut fill",
+        "volume"
+      ],
+      "featured": true
+    },
+    {
+      "id": "opendronemap",
+      "name": "OpenDroneMap",
+      "category": "survey-earthworks",
+      "mode": "Python",
+      "license": "AGPL-3.0",
+      "source": "https://github.com/OpenDroneMap/ODM",
+      "summary": "Process site photographs into orthophotos, DEMs and point clouds.",
+      "caution": "Drone quantities need control data and survey validation.",
+      "tags": [
+        "drone",
+        "survey",
+        "terrain",
+        "dem"
+      ],
+      "featured": false
+    },
+    {
+      "id": "pdal-point-cloud-library",
+      "name": "PDAL Point Cloud Library",
+      "category": "survey-earthworks",
+      "mode": "Python",
+      "license": "BSD-3-Clause",
+      "source": "https://github.com/PDAL/PDAL",
+      "summary": "LiDAR/point-cloud processing pipelines for terrain datasets.",
+      "caution": "Programming component, not survey-certified volume calculations.",
+      "tags": [
+        "lidar",
+        "point cloud",
+        "survey",
+        "terrain"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gdal-ogr",
+      "name": "GDAL / OGR",
+      "category": "survey-earthworks",
+      "mode": "Python",
+      "license": "MIT-style (core)",
+      "source": "https://github.com/OSGeo/gdal",
+      "summary": "Raster/vector GIS data processing for site quantity automation.",
+      "caution": "Geospatial drivers have varying licenses and coordinate-unit requirements.",
+      "tags": [
+        "gis",
+        "raster",
+        "vector",
+        "terrain"
+      ],
+      "featured": false
+    },
+    {
+      "id": "open3d",
+      "name": "Open3D",
+      "category": "survey-earthworks",
+      "mode": "Python",
+      "license": "MIT",
+      "source": "https://github.com/isl-org/Open3D",
+      "summary": "3D point-cloud/mesh geometry analysis useful for survey comparisons.",
+      "caution": "Code library, not a turnkey surveying app.",
+      "tags": [
+        "point cloud",
+        "mesh",
+        "survey",
+        "volume"
+      ],
+      "featured": false
+    },
+    {
+      "id": "geopandas",
+      "name": "GeoPandas",
+      "category": "survey-earthworks",
+      "mode": "Python",
+      "license": "BSD-3-Clause",
+      "source": "https://github.com/geopandas/geopandas",
+      "summary": "Python polygon and geospatial analysis of site areas and parcels.",
+      "caution": "Calculate physical areas using the correct projected CRS.",
+      "tags": [
+        "gis",
+        "python",
+        "site",
+        "area"
+      ],
+      "featured": false
+    },
+    {
+      "id": "shapely",
+      "name": "Shapely",
+      "category": "survey-earthworks",
+      "mode": "Python",
+      "license": "BSD-3-Clause",
+      "source": "https://github.com/shapely/shapely",
+      "summary": "Polygon areas, intersections, unions and geometric deductions for takeoff automation.",
+      "caution": "Unitless planar geometry; convert CAD/GIS units before pricing.",
+      "tags": [
+        "area",
+        "polygon",
+        "geometry",
+        "python"
+      ],
+      "featured": false
+    },
+    {
+      "id": "librecad-2d",
+      "name": "LibreCAD 2D",
+      "category": "drawing-takeoff",
+      "mode": "Desktop",
+      "license": "GPL-2.0",
+      "source": "https://github.com/LibreCAD/LibreCAD",
+      "summary": "2D CAD drawing review, DXF editing and geometric measurement.",
+      "caution": "Not integrated with priced takeoffs; DWG conversion can be needed.",
+      "tags": [
+        "cad",
+        "dxf",
+        "dwg",
+        "measurement"
+      ],
+      "featured": false
+    },
+    {
+      "id": "mozilla-pdf-js",
+      "name": "Mozilla PDF.js",
+      "category": "drawing-takeoff",
+      "mode": "SDK",
+      "license": "Apache-2.0",
+      "source": "https://github.com/mozilla/pdf.js",
+      "summary": "Browser PDF rendering engine for building custom drawing takeoff interfaces.",
+      "caution": "PDF rendering alone does not measure areas or assign drawing scale.",
+      "tags": [
+        "pdf",
+        "browser",
+        "drawings",
+        "viewer"
+      ],
+      "featured": false
+    },
+    {
+      "id": "paddleocr",
+      "name": "PaddleOCR",
+      "category": "automation",
+      "mode": "Python",
+      "license": "Apache-2.0",
+      "source": "https://github.com/PaddlePaddle/PaddleOCR",
+      "summary": "OCR and layout extraction for scanned BOQs and technical schedules.",
+      "caution": "Verify extracted units, table boundaries and numbers against source.",
+      "tags": [
+        "ocr",
+        "boq",
+        "tables",
+        "pdf"
+      ],
+      "featured": false
+    },
+    {
+      "id": "tesseract-ocr",
+      "name": "Tesseract OCR",
+      "category": "automation",
+      "mode": "Python",
+      "license": "Apache-2.0",
+      "source": "https://github.com/tesseract-ocr/tesseract",
+      "summary": "Extract text from scanned drawings and tender documents.",
+      "caution": "OCR does not establish reliable dimensions or contractual meanings.",
+      "tags": [
+        "ocr",
+        "scanned",
+        "pdf",
+        "drawings"
+      ],
+      "featured": false
+    },
+    {
+      "id": "pymupdf",
+      "name": "PyMuPDF",
+      "category": "automation",
+      "mode": "Python",
+      "license": "AGPL-3.0",
+      "source": "https://github.com/pymupdf/PyMuPDF",
+      "summary": "PDF parsing, vector text and drawing annotation automation.",
+      "caution": "Review AGPL or commercial-license obligations before embedding.",
+      "tags": [
+        "pdf",
+        "markup",
+        "vectors",
+        "boq"
+      ],
+      "featured": false
+    },
+    {
+      "id": "pypdf",
+      "name": "pypdf",
+      "category": "automation",
+      "mode": "Python",
+      "license": "BSD-3-Clause",
+      "source": "https://github.com/py-pdf/pypdf",
+      "summary": "Split, merge, rotate and organize contract PDFs and bid packages.",
+      "caution": "No drawing quantification; check combined page numbering and order.",
+      "tags": [
+        "pdf",
+        "merge",
+        "split",
+        "tender"
+      ],
+      "featured": false
+    },
+    {
+      "id": "acadsharp-dxf-dwg",
+      "name": "ACadSharp (DXF/DWG)",
+      "category": "automation",
+      "mode": "SDK",
+      "license": "MIT",
+      "source": "https://github.com/DomCR/ACadSharp",
+      "summary": "C# .NET library to read/write DWG/DXF for automated drawing analysis.",
+      "caution": "DXF/DWG support depends on versions; project-specific units and layers need handling.",
+      "tags": [
+        "cad",
+        "dxf",
+        "dwg",
+        "csharp"
+      ],
+      "featured": false
+    },
+    {
+      "id": "paperless-ngx",
+      "name": "Paperless-ngx",
+      "category": "contract-controls",
+      "mode": "Self-hosted",
+      "license": "GPL-3.0",
+      "source": "https://github.com/paperless-ngx/paperless-ngx",
+      "summary": "Searchable OCR archive for invoices, contracts and project correspondence.",
+      "caution": "Not a formal construction EDMS or approved notices register.",
+      "tags": [
+        "document",
+        "invoice",
+        "contract",
+        "archive"
+      ],
+      "featured": false
+    },
+    {
+      "id": "google-or-tools",
+      "name": "Google OR-Tools",
+      "category": "contract-controls",
+      "mode": "Python",
+      "license": "Apache-2.0",
+      "source": "https://github.com/google/or-tools",
+      "summary": "Optimization algorithms for scheduling and crew/resource scenarios.",
+      "caution": "Not a forensic CPM or delay-entitlement engine; user must build the model.",
+      "tags": [
+        "schedule",
+        "resources",
+        "optimization"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ganttproject",
+      "name": "GanttProject",
+      "category": "contract-controls",
+      "mode": "Desktop",
+      "license": "GPL-3.0",
+      "source": "https://github.com/bardsoftware/ganttproject",
+      "summary": "Gantt charts, task relationships and construction progress planning.",
+      "caution": "Not full EOT/critical-path entitlement analysis.",
+      "tags": [
+        "schedule",
+        "gantt",
+        "project",
+        "progress"
+      ],
+      "featured": false
     }
-  ]
+  ],
+  "compatibilityNote": "ChatGPT (instructions) means reusable instructions/prompts, NOT a native installable ChatGPT plugin. Claude Code skills and MCP servers are separately identified; their installation depends on the user's AI host.",
+  "researchScope": "PDF and CAD takeoff, BIM/IFC quantities, rate buildup, contract controls, earthworks/survey workflows, Claude/ChatGPT-compatible prompts and skills, MCP servers. GitLab also searched; no extra candidate admitted without comparable source/license evidence."
 }
