@@ -179,15 +179,22 @@ async function loadRepos() {
 }
 
 async function loadMegaRepoStats() {
+  let reportLoaded = false;
   try {
     const res = await fetch("https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/merge-report.json", { cache: "no-store" });
     if (res.ok) {
       const report = await res.json();
+      reportLoaded = true;
       if (report.uniquePlugins != null) animateNumber($("cs-plugins"), report.uniquePlugins);
       if (report.sourceHealth?.ok != null) animateNumber($("cs-sources"), report.sourceHealth.ok);
       if (report.packageHealth?.failed != null) animateNumber($("cs-failures"), report.packageHealth.failed);
+      const refreshed = $("mega-refresh");
+      if (refreshed) refreshed.textContent = typeof report.generatedAt === "string" && report.generatedAt.trim()
+        ? "Last successful catalog refresh: " + report.generatedAt
+        : "Published catalog statistics loaded";
     }
   } catch (e) { console.debug("Mega Repo stats unavailable", e); }
+  if (!reportLoaded && $("mega-refresh")) $("mega-refresh").textContent = "Catalog statistics temporarily unavailable";
 
   try {
     const res = await fetch("https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json", { cache: "no-store" });
@@ -196,6 +203,26 @@ async function loadMegaRepoStats() {
       if (Array.isArray(custom)) animateNumber($("cs-custom"), custom.length);
     }
   } catch (e) { console.debug("Custom provider count unavailable", e); }
+}
+
+
+function setupMegaRepoShowcase() {
+  const button = $("mega-copy-shortcode");
+  const shortcode = $("mega-shortcode");
+  const feedback = $("mega-copy-status");
+  if (!button || !shortcode || !feedback) return;
+  button.addEventListener("click", async () => {
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable");
+      await navigator.clipboard.writeText(shortcode.value);
+      feedback.textContent = "Copied! Paste in CloudStream → Add Repository.";
+      button.textContent = "Copied";
+    } catch {
+      shortcode.focus();
+      shortcode.select();
+      feedback.textContent = "Clipboard unavailable. The shortcode is selected for manual copying.";
+    }
+  });
 }
 
 function runTerminalTyping() {
@@ -231,6 +258,7 @@ $("repo-sort").addEventListener("change", applyFilters);
 $("year").textContent = new Date().getFullYear();
 addEventListener("scroll", updateScrollProgress, { passive: true });
 
+setupMegaRepoShowcase();
 observeReveals();
 bindPointerGlow();
 runTerminalTyping();
