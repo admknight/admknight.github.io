@@ -85,6 +85,8 @@ select{height:42px;border:1px solid var(--line);background:#0f1828;color:var(--t
 .about-copy{color:var(--muted);font-size:1.03rem}.about-links{display:flex;gap:20px;flex-wrap:wrap}.about-links a{color:var(--cyan);text-decoration:none;font-weight:750}
 .footer{min-height:95px;border-top:1px solid rgba(255,255,255,.055);display:flex;justify-content:space-between;align-items:center;color:#71829b;font-size:.82rem}
 .footer a{color:#aebcd0;text-decoration:none}
+.footer .page-counter{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;line-height:1}
+.footer .page-counter img{height:20px;width:auto;max-width:100%;display:block}
 
 @media(max-width:900px){
   .nav-links a:not(.nav-github):not(.nav-megarepo){display:none}
