@@ -159,7 +159,7 @@ async function loadRepos() {
     if (!res.ok) throw new Error("GitHub API returned " + res.status);
     const data = await res.json();
     repos = data.filter(r => !r.private && !EXCLUDED.has(r.name));
-    const stars = repos.reduce((sum,r) => sum + (r.stargazers_count || 0), 0);
+    const stars = data.filter(r => !r.private).reduce((sum,r) => sum + (r.stargazers_count || 0), 0);
 
     $("repo-count").textContent = repos.length;
     $("star-count").textContent = compact(stars);
@@ -247,6 +247,19 @@ function runTerminalTyping() {
   });
 }
 
+
+function setupBackToTop() {
+  const button = $("back-to-top");
+  if (!button) return;
+  const update = () => { button.hidden = (window.scrollY || document.documentElement.scrollTop || 0) <= 320; };
+  button.addEventListener("click", () => window.scrollTo({
+    top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+  }));
+  addEventListener("scroll", update, { passive: true });
+  addEventListener("pageshow", update);
+  update();
+}
+
 function updateScrollProgress() {
   const max = document.documentElement.scrollHeight - innerHeight;
   const pct = max > 0 ? (scrollY / max) * 100 : 0;
@@ -259,6 +272,7 @@ $("year").textContent = new Date().getFullYear();
 addEventListener("scroll", updateScrollProgress, { passive: true });
 
 setupMegaRepoShowcase();
+setupBackToTop();
 observeReveals();
 bindPointerGlow();
 runTerminalTyping();
