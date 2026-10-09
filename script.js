@@ -99,7 +99,7 @@ function render(list) {
       repo.archived ? '<span class="repo-tag">Archived</span>' : ""
     ].join("");
     return `
-      <a class="repo-card" href="${esc(repo.html_url)}" target="_blank" rel="noreferrer">
+      <a class="repo-card" href="${esc(repo.html_url)}" target="_blank" rel="noopener noreferrer">
         <div class="repo-top">
           <span class="repo-name">${esc(repo.name)}</span>
           <span class="repo-arrow">↗</span>
@@ -125,7 +125,7 @@ function renderActivity() {
     .sort((a,b) => new Date(b.updated_at || 0) - new Date(a.updated_at || 0))
     .slice(0,5);
   box.innerHTML = recent.map(repo => `
-    <a class="activity-row" href="${esc(repo.html_url)}" target="_blank" rel="noreferrer">
+    <a class="activity-row" href="${esc(repo.html_url)}" target="_blank" rel="noopener noreferrer">
       <div class="activity-main">
         <div class="activity-name"><span class="status-ok">●</span> ${esc(repo.name)}</div>
         <p class="activity-description">${esc(repo.description || "Public GitHub repository by Adam Knight.")}</p>
@@ -173,7 +173,7 @@ async function loadRepos() {
     console.error(err);
     $("repo-grid").innerHTML = "";
     $("repo-message").hidden = false;
-    $("repo-message").innerHTML = 'GitHub repository data is temporarily unavailable. <a href="https://github.com/admknight?tab=repositories">Browse repositories on GitHub ↗</a>';
+    $("repo-message").innerHTML = 'GitHub repository data is temporarily unavailable. <a href="https://github.com/admknight?tab=repositories" target="_blank" rel="noopener noreferrer">Browse repositories on GitHub ↗</a>';
     if ($("activity-status")) $("activity-status").innerHTML = "GitHub data unavailable";
   }
 }
