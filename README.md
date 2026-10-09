@@ -17,7 +17,7 @@ Source for **https://admknight.github.io/** — the public project hub for Adam 
 - **[Personal Repository Builder](https://adam-cloudstream-bundles.badass-insane.workers.dev/):** choose up to 100 extensions and generate a personal installable repository URL. Plugins are not installed automatically.
 - **[Extension Explorer](https://admknight.github.io/CloudstreamExtensions/explore.html):** search, filter, and bookmark extension names. Bookmarks are local reference notes, not installable repositories.
 
-The project also runs guarded aggregation every three hours and a separate read-only hourly package-integrity audit. These describe the current project, not a claim to be the first personalized CloudStream repository.
+The project also runs guarded aggregation every three hours and a separate read-only hourly package-integrity audit.
 
 ## Updating
 
