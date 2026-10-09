@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>Open-source Estimating & QS Tools | Adam Knight</title>
+  <meta name="description" content="Curated open-source tools for construction PDF takeoff, BIM quantities, BOQs, rate analysis, contract controls, and engineering automation. Source links and license notes.">
+  <link rel="canonical" href="https://admknight.github.io/estimating-tools.html">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Open-source Construction Estimating & QS Tools">
+  <meta property="og:description" content="A carefully categorized directory of construction estimating, takeoff, rates and contract-control software.">
+  <meta property="og:url" content="https://admknight.github.io/estimating-tools.html">
+  <link rel="stylesheet" href="/estimating-tools.css?v=1">
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"CollectionPage","name":"Open-source Estimating & QS Tools","url":"https://admknight.github.io/estimating-tools.html","description":"An independent index of third-party open-source tools for construction estimating, quantity takeoff, rate analysis and contract administration."}
+  </script>
+</head>
+<body>
+  <div class="qs-glow qs-glow-a" aria-hidden="true"></div>
+  <div class="qs-glow qs-glow-b" aria-hidden="true"></div>
+  <header class="qs-header">
+    <nav class="qs-container qs-nav" aria-label="Site navigation">
+      <a class="qs-brand" href="/" aria-label="Return to Adam Knight portfolio"><span class="qs-brandmark">AK<span>.</span></span><span>Adam Knight</span></a>
+      <div class="qs-nav-links">
+        <a href="/" class="qs-nav-home">Portfolio</a>
+        <a href="#resources">Explore tools</a>
+        <a href="#read-first">Read before hosting</a>
+        <a class="qs-nav-github" href="https://github.com/admknight" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="qs-container qs-hero">
+      <div class="qs-hero-copy">
+        <p class="qs-kicker"><span class="qs-dot"></span> CONSTRUCTION TECHNOLOGY · OPEN SOURCE</p>
+        <h1>Estimate smarter.<br><span>Build with open tools.</span></h1>
+        <p class="qs-lead">A practical directory for estimators, quantity surveyors, and contracts professionals. Discover tools for PDF takeoff, BIM quantities, BOQs, cost rates, payment applications, and repeatable automation.</p>
+        <div class="qs-actions">
+          <a class="qs-button qs-button-primary" href="#resources">Explore the library <span aria-hidden="true">↓</span></a>
+          <a class="qs-button qs-button-secondary" href="https://github.com/admknight/admknight.github.io/blob/main/assets/estimating-resources.json" target="_blank" rel="noopener noreferrer">View source catalog ↗</a>
+        </div>
+        <p class="qs-attribution"><span class="qs-kicker-mini">INDEPENDENT DIRECTORY</span> Tools belong to their original authors; this page does not mirror, install, or claim ownership of third-party software.</p>
+      </div>
+      <div class="qs-hero-terminal" aria-label="Sample estimating workflow">
+        <div class="qs-terminal-top"><span></span><span></span><span></span><strong>workflow.preview</strong></div>
+        <div class="qs-terminal-body">
+          <div><span class="qs-term-dollar">$</span> input <b>drawings.pdf</b> / <b>model.ifc</b></div>
+          <div class="qs-term-indented">→ quantity takeoff <span>area · length · count</span></div>
+          <div class="qs-term-indented">→ unit-rate build-up <span>labor · material · plant</span></div>
+          <div class="qs-term-indented">→ cost estimate <span>BOQ · revisions</span></div>
+          <div class="qs-term-indented">→ contract controls <span>variations · payments</span></div>
+          <p class="qs-terminal-done">✓ Traceable quantities. Reviewable assumptions.</p>
+          <p class="qs-terminal-caption">Example workflow, not an automated end-to-end service.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qs-container qs-overview" aria-label="Directory coverage">
+      <div><strong id="qs-total">16</strong><span>Curated resources</span></div>
+      <div><strong>05</strong><span>Areas of work</span></div>
+      <div><strong>100%</strong><span>Linked to original authors</span></div>
+      <div><strong>2026</strong><span>Last research year</span></div>
+    </section>
+
+    <section id="resources" class="qs-container qs-content">
+      <div class="qs-section-head">
+        <div>
+          <p class="qs-kicker">DISCOVER · FILTER · EVALUATE</p>
+          <h2>Browse the toolkit</h2>
+          <p>Search for a task, select a category, then compare the license and deployment requirements before trying a project.</p>
+        </div>
+        <div class="qs-refresh"><span class="qs-dot"></span><span id="qs-review-date">Source-reviewed index</span></div>
+      </div>
+
+      <div class="qs-toolbar" aria-label="Resource filters">
+        <label class="qs-search">
+          <span class="qs-search-icon" aria-hidden="true">⌕</span>
+          <span class="qs-visually-hidden">Search tools</span>
+          <input id="qs-query" type="search" autocomplete="off" placeholder="Search PDF, rate analysis, IFC, contracts, DXF…" aria-label="Search tools by use case">
+        </label>
+        <label class="qs-select-wrap"><span class="qs-visually-hidden">Deployment type</span>
+          <select id="qs-deployment" aria-label="Filter by deployment type">
+            <option value="all">Any platform</option>
+            <option value="Browser">Browser</option>
+            <option value="Desktop">Desktop</option>
+            <option value="Self-hosted">Self-hosted server</option>
+            <option value="Python">Python library</option>
+            <option value="Add-on">Application add-on</option>
+          </select>
+        </label>
+      </div>
+      <div class="qs-filters" id="qs-categories" role="group" aria-label="Filter by construction task">
+        <button type="button" class="qs-chip is-active" data-category="all" aria-pressed="true">All tools</button>
+      </div>
+
+      <div class="qs-results-heading">
+        <p id="qs-result-count" role="status" aria-live="polite">Loading checked sources…</p>
+        <span class="qs-results-note">Original repositories · No executable downloads from this site</span>
+      </div>
+      <div id="qs-grid" class="qs-grid" aria-label="Curated open-source tools" aria-live="polite"></div>
+      <div id="qs-empty" class="qs-empty" hidden>
+        <strong>No matching projects</strong>
+        <p>Try a broader search or remove your deployment filter.</p>
+        <button type="button" id="qs-clear" class="qs-button qs-button-secondary">Clear filters</button>
+      </div>
+    </section>
+
+    <section id="read-first" class="qs-container qs-guidance">
+      <div class="qs-guidance-head">
+        <p class="qs-kicker">USE RESPONSIBLY</p>
+        <h2>Before you host, fork, or use a tool on a live estimate</h2>
+      </div>
+      <div class="qs-guidance-grid">
+        <article><span class="qs-guide-num">01 / LICENSE</span><h3>Open code ≠ free data</h3><p>Follow each upstream license and retain required notices. Cost databases, drawings, templates, third-party dependencies, and trademarks may have separate restrictions.</p></article>
+        <article><span class="qs-guide-num">02 / TAKEOFF</span><h3>Calibrate and reconcile</h3><p>Check sheet scales, units, overlaps, deductions, IFC classifications and quantities against source drawings. Automated results are not certification.</p></article>
+        <article><span class="qs-guide-num">03 / ESTIMATING</span><h3>Price for the right project</h3><p>Rate libraries are not automatically current market quotations. Validate date, locale, labor productivity, tax, freight, waste and scope before pricing a bid.</p></article>
+        <article><span class="qs-guide-num">04 / CONTRACTS</span><h3>Preserve governing terms</h3><p>Contract-control tools do not decide FIDIC entitlement. Engineer instructions, variations, time bars and payment procedures require the actual signed contract and supporting records.</p></article>
+      </div>
+      <div class="qs-license-watch">
+        <strong>Why some projects are not copied here</strong>
+        <p>A construction cost dataset reviewed during research uses CC BY-NC 4.0 for data, and one Odoo contracting module has conflicting license signals (its README says OPL-1). Neither is mirrored or promoted here as unrestricted reusable code. A “free” web demo may also advertise a separately paid Excel product. Check upstream terms first.</p>
+      </div>
+    </section>
+
+    <section class="qs-container qs-next">
+      <div>
+        <p class="qs-kicker">BUILDING BLOCKS</p>
+        <h2>From curated tools to your own estimating automations</h2>
+        <p>This directory is a first step. Separate original modules could later cover steel quantity/weight libraries, rate buildup sheets, drawing-to-BOQ workflows, and variation logs—with tested units and auditable assumptions.</p>
+      </div>
+      <a class="qs-button qs-button-secondary" href="https://github.com/admknight/admknight.github.io" target="_blank" rel="noopener noreferrer">Contribute or suggest a tool ↗</a>
+    </section>
+  </main>
+
+  <footer class="qs-footer">
+    <div class="qs-container qs-footer-inner">
+      <span>© <span id="qs-year">2026</span> Adam Knight · Independent open-source research</span>
+      <span><a href="/">Portfolio</a> · <a href="#read-first">Usage & licenses</a> · <a href="https://github.com/admknight/admknight.github.io" target="_blank" rel="noopener noreferrer">Page source ↗</a></span>
+    </div>
+  </footer>
+  <button id="qs-top" class="qs-top" type="button" aria-label="Back to top" hidden>↑ Back to top</button>
+  <script src="/estimating-tools.js?v=1" defer></script>
+</body>
+</html>
