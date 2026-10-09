@@ -87,7 +87,7 @@ select{height:42px;border:1px solid var(--line);background:#0f1828;color:var(--t
 .footer a{color:#aebcd0;text-decoration:none}
 
 @media(max-width:900px){
-  .nav-links a:not(.nav-github){display:none}
+  .nav-links a:not(.nav-github):not(.nav-megarepo){display:none}
   .hero{grid-template-columns:1fr;gap:36px;min-height:auto;padding:70px 0}
   .hero-panel{max-width:620px;width:100%}
   .metrics{grid-template-columns:repeat(2,1fr)}
@@ -99,7 +99,7 @@ select{height:42px;border:1px solid var(--line);background:#0f1828;color:var(--t
 }
 @media(max-width:620px){
   .shell{width:min(100% - 28px,1160px)}
-  .nav{height:70px}.brand span{display:none}
+  .nav{height:70px;gap:9px}.brand{gap:8px;font-size:.82rem;white-space:nowrap}.brand img{width:32px;height:32px}.nav-links{gap:9px}.nav-links a{font-size:.79rem}.nav-github{padding:7px 9px}
   h1{font-size:clamp(3rem,16vw,4.4rem)}
   .hero{padding-top:54px}.hero-text{font-size:1rem}
   .metrics{grid-template-columns:1fr 1fr}.metrics article{padding:18px}
