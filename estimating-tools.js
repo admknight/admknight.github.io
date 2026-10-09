@@ -6,6 +6,7 @@
     query: document.getElementById('qs-query'),
     categoryRoot: document.getElementById('qs-categories'),
     deployment: document.getElementById('qs-deployment'),
+    access: document.getElementById('qs-access'),
     results: document.getElementById('qs-result-count'),
     empty: document.getElementById('qs-empty'),
     clear: document.getElementById('qs-clear'),
@@ -24,7 +25,8 @@
     'ai-skills-mcp': {name:'AI Skills & MCP',symbol:'✧'}
   };
 
-  const state = {resources:[],category:'all',term:'',mode:'all'};
+  const state = {resources:[],category:'all',term:'',mode:'all',access:'all'};
+  const allowedAccess = new Set(['Open Source','Open Source (Archived)','Personal / Internal Use','Noncommercial Data','Hosted / Account Required','License Conflict','Terms Unclear / Paid']);
   const allowedModes = new Set(['Browser','Desktop','Self-hosted','Python','Add-on','SDK','AI Skill','MCP Server','Prompt Pack']);
   const label = (tag, className, value) => {
     const element = document.createElement(tag);
@@ -51,7 +53,7 @@
     const ids = new Set();
     for (const item of data.resources) {
       if (!item.id || ids.has(item.id) || !allCategories.has(item.category) ||
-          !allowedModes.has(item.mode) || !item.name || !item.license ||
+          !allowedModes.has(item.mode) || !allowedAccess.has(item.accessLevel) || !item.name || !item.license ||
           !item.summary || !item.source) {
         throw new Error('Catalog contains invalid or duplicated resources');
       }
@@ -60,6 +62,9 @@
       }
       if (item.demo && new URL(item.demo).protocol !== 'https:') {
         throw new Error('Demo URL must use HTTPS');
+      }
+      if (item.licenseUrl && new URL(item.licenseUrl).hostname !== 'github.com') {
+        throw new Error('License reference must link to original GitHub repository');
       }
       ids.add(item.id);
     }
@@ -81,6 +86,9 @@
 
     wrapper.append(label('h3','',item.name));
     wrapper.append(label('span','qs-card-kind',categories[item.category].name));
+    const access = label('span','qs-access','Use: '+item.accessLevel);
+    access.dataset.level = item.accessLevel.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+    wrapper.append(access);
     wrapper.append(label('p','',item.summary));
     if (Array.isArray(item.compatibleWith) && item.compatibleWith.length) {
       wrapper.append(label('p','qs-compat','Compatible: '+item.compatibleWith.join(' · ')));
@@ -89,7 +97,8 @@
     const bottom = label('div','qs-card-bottom');
     bottom.append(label('span','qs-platform',item.mode));
     const links = label('div','qs-card-links');
-    links.append(safeLink(item.source,'Source ↗','qs-source'));
+    links.append(safeLink(item.source,item.sourceLabel || 'Source ↗','qs-source'));
+    if (item.licenseUrl) links.append(safeLink(item.licenseUrl,'Terms ↗','qs-terms'));
     if (item.demo) links.append(safeLink(item.demo,'Open demo ↗','qs-demo'));
     bottom.append(links);
     wrapper.append(bottom);
@@ -101,8 +110,9 @@
     const matched = state.resources.filter(item => {
       if (state.category !== 'all' && item.category !== state.category) return false;
       if (state.mode !== 'all' && item.mode !== state.mode) return false;
+      if (state.access !== 'all' && item.accessLevel !== state.access) return false;
       if (!term) return true;
-      const haystack = [item.name,item.category,item.summary,item.caution,item.license,item.mode,...(item.tags || []),...(item.compatibleWith || [])].join(' ').toLowerCase();
+      const haystack = [item.name,item.category,item.summary,item.caution,item.license,item.accessLevel,item.mode,...(item.tags || []),...(item.compatibleWith || [])].join(' ').toLowerCase();
       return haystack.includes(term);
     }).sort((a,b) => (Number(b.featured) - Number(a.featured)) || a.name.localeCompare(b.name));
     const nodes = matched.map(card);
@@ -131,9 +141,11 @@
   function reset() {
     state.term = '';
     state.mode = 'all';
+    state.access = 'all';
     state.category = 'all';
     keys.query.value = '';
     keys.deployment.value = 'all';
+    keys.access.value = 'all';
     categoryControls();
     render();
     keys.query.focus();
@@ -151,6 +163,7 @@
   async function load() {
     keys.query.addEventListener('input',event=>{state.term=event.target.value;render();});
     keys.deployment.addEventListener('change',event=>{state.mode=event.target.value;render();});
+    keys.access.addEventListener('change',event=>{state.access=event.target.value;render();});
     keys.clear.addEventListener('click',reset);
     document.getElementById('qs-year').textContent = String(new Date().getFullYear());
     scrollControl();

@@ -104,3 +104,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #75c1ff;outline-offset:3p
 /* Keep longer verified licenses readable; show AI host guidance unobtrusively. */
 .qs-license{max-width:calc(100% - 52px);white-space:normal;overflow-wrap:anywhere;text-align:right}
 .qs-compat{color:#89cbef!important;font-size:.75rem!important;font-weight:700;line-height:1.55!important;margin:0 0 10px!important}
+
+/* Permission status is distinct from copyright licensing and installation type. */
+.qs-access{align-self:flex-start;display:inline-block;margin:1px 0 13px;border:1px solid #396280;border-radius:7px;background:#19354b;padding:4px 9px;color:#94d1f0;font-size:.71rem;font-weight:750;line-height:1.4;letter-spacing:.005em}
+.qs-access[data-level="noncommercial-data"],.qs-access[data-level="personal-internal-use"]{color:#95e8b5;border-color:#38765a;background:#15382b}
+.qs-access[data-level="license-conflict"],.qs-access[data-level="terms-unclear-paid"],.qs-access[data-level="hosted-account-required"]{color:#f3ca91;border-color:#725c3c;background:#352a1d}

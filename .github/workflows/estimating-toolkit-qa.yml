@@ -44,7 +44,7 @@ jobs:
 
           base = "https://admknight.github.io"
           checks = {
-            "/estimating-tools.html": [b"Estimate smarter.", b"estimating-tools.js", b"does not mirror"],
+            "/estimating-tools.html": [b"Estimate smarter.", b"estimating-tools.js?v=3", b"id=\"qs-access\"", b"does not mirror"],
             "/assets/estimating-resources.json": [b'"resources"', b'"opentakeoff"', b'"BuildSuite Core"'],
             "/estimating-tools.js": [b"categoryControls", b"qs-grid"],
             "/estimating-tools.css": [b".qs-card", b"@media"],
@@ -63,8 +63,10 @@ jobs:
                   assert required in payload, f"{path}: missing {required!r}"
                 if path.endswith(".json"):
                   obj = json.loads(payload)
-                  assert len(obj["resources"]) == 54, "Wrong published resource count"
-                  assert sum(r["category"] == "ai-skills-mcp" for r in obj["resources"]) == 16, "AI skills missing"
+                  assert len(obj["resources"]) == 65, "Wrong published resource count"
+                  assert sum(r["accessLevel"] == "Personal / Internal Use" for r in obj["resources"]) == 6, "Personal-use tools missing"
+                  assert sum(r["accessLevel"] == "Noncommercial Data" for r in obj["resources"]) == 1, "Noncommercial data missing"
+                  assert sum(r["category"] == "ai-skills-mcp" for r in obj["resources"]) == 25, "AI skills missing"
               print(f"PASS: new QS Toolkit HTML, CSS, JS, data and portfolio links all live (attempt {attempt+1})")
               break
             except Exception as exc:
